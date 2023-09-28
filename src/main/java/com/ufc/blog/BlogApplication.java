@@ -1,13 +1,12 @@
 package com.ufc.blog;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import com.ufc.blog.dao.WriteUserCsv;
 
-@SpringBootApplication
 public class BlogApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BlogApplication.class, args);
+		WriteUserCsv writer = new WriteUserCsv();
+		writer.newFile("data.csv");
 	}
 
 }
