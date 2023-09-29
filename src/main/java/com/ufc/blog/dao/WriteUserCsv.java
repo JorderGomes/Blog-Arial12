@@ -1,6 +1,9 @@
 package com.ufc.blog.dao;
 
 import java.io.File;
+import java.io.FileWriter;
+
+import com.ufc.blog.models.User;
 
 // Jorder
 public class WriteUserCsv {
@@ -18,4 +21,13 @@ public class WriteUserCsv {
         }
     }
 
+    public void saveUser(User user) {
+        try {
+            FileWriter writer = new FileWriter("data.csv", true);
+            writer.append(user.toStringCsv());
+            writer.close();
+        } catch (Exception e) {
+            System.err.println("Error: " + e.getMessage());
+        }
+    }
 }
