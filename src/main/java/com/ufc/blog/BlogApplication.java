@@ -8,13 +8,14 @@ public class BlogApplication {
 	public static void main(String[] args) {
 		DataService service = new DataService();
 		User testUser = new User(
-				"Eleonore2",
+				"Twister",
 				"xL2|$UaKaev",
 				"ebullan0@zdnet.com",
 				"Re-engineered solution-oriented projection",
 				3);
 
 		service.saveUser(testUser);
+		service.countLines();
 	}
 
 }

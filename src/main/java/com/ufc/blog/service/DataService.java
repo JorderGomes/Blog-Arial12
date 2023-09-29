@@ -10,10 +10,12 @@ public class DataService {
     ReadUserCsv readUserCsv = new ReadUserCsv();
     ConvertCsvJson convertCsvJson = new ConvertCsvJson();
 
-    
-
     public void saveUser(User user) {
         writeUserCsv.saveUser(user);
+    }
+
+    public void countLines() {
+        readUserCsv.countLines();
     }
 
 }
