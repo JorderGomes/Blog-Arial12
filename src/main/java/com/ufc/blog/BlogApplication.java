@@ -11,10 +11,10 @@ public class BlogApplication {
 	public static void main(String[] args) {
 
 		Scanner scanner = new Scanner(System.in);
-		int choice;
+		int choice = 0;
 		DataService service = new DataService();
 
-		do {
+		while (choice != 5) {
 			System.out.println("Menu:");
 			System.out.println("1 - Salvar novo usuário");
 			System.out.println("2 - Contar usuários");
@@ -23,38 +23,46 @@ public class BlogApplication {
 			System.out.println("5 - Sair");
 			System.out.print("Escolha uma opção: ");
 
-			choice = scanner.nextInt();
-
-			switch (choice) {
-				case 1:
-					// Opção 1: Salvar novo usuário
-					saveNewUser(service);
-					break;
-				case 2:
-					// Opção 2: Contar usuários
-					service.countLines();
-					break;
-				case 3:
-					// Opção 3: Converter CSV para Json
-					service.convertCsvToJson();
-					break;
-				case 4:
-					// Opção 4: Converter CSV para XML
-					service.convertCsvToXml();
-					break;
-				case 5:
-					// Opção 5: Sair do programa
-					System.out.println("Saindo...");
-					break;
-				default:
-					System.out.println("Opção inválida. Tente novamente.");
+			if (scanner.hasNextInt()) {
+				
+				choice = scanner.nextInt();
+				scanner.nextLine();
+	
+				switch (choice) {
+					case 1:
+						// Opção 1: Salvar novo usuário
+						saveNewUser(service, scanner);
+						break;
+					case 2:
+						// Opção 2: Contar usuários
+						service.countLines();
+						break;
+					case 3:
+						// Opção 3: Converter CSV para Json
+						service.convertCsvToJson();
+						break;
+					case 4:
+						// Opção 4: Converter CSV para XML
+						service.convertCsvToXml();
+						break;
+					case 5:
+						// Opção 5: Sair do programa
+						System.out.println("Saindo...");
+						break;
+					default:
+						System.out.println("Opção inválida. Tente novamente.");
+				}
+			} else{
+				scanner.nextLine();
+				choice = 0;
 			}
-		} while (choice != 5);
+		} 
+		
 		scanner.close();
 	}
 
-	private static void saveNewUser(DataService service) {
-        Scanner scanner = new Scanner(System.in);
+	private static void saveNewUser(DataService service, Scanner scanner) {
+        // Scanner scanner = new Scanner(System.in);
         System.out.println("Digite os dados do novo usuário:");
 
         System.out.print("Nome: ");
@@ -74,7 +82,7 @@ public class BlogApplication {
 
         User newUser = new User(name, password, email, bio, rate);
         service.saveUser(newUser);
-		scanner.close();
+		// scanner.close();
     }
 
 }
