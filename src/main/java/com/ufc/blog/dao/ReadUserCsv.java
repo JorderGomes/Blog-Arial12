@@ -12,7 +12,6 @@ public class ReadUserCsv {
             while (reader.readLine() != null) {
                 lineCounter++;
             }
-            lineCounter--;
             System.out.println("Qtd entidades: " + lineCounter);
             reader.close();
         } catch (Exception e) {
