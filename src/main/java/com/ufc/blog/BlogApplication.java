@@ -14,20 +14,22 @@ public class BlogApplication {
 		int choice = 0;
 		DataService service = new DataService();
 
-		while (choice != 5) {
+		while (choice != 7) {
 			System.out.println("Menu:");
 			System.out.println("1 - Salvar novo usuário");
 			System.out.println("2 - Contar usuários");
 			System.out.println("3 - Converter CSV para Json");
 			System.out.println("4 - Converter CSV para XML");
-			System.out.println("5 - Sair");
+			System.out.println("5 - Comprimir CSV");
+			System.out.println("6 - Mostrar Hash SHA256 do CSV");
+			System.out.println("7 - Sair");
 			System.out.print("Escolha uma opção: ");
 
 			if (scanner.hasNextInt()) {
-				
+
 				choice = scanner.nextInt();
 				scanner.nextLine();
-	
+
 				switch (choice) {
 					case 1:
 						// Opção 1: Salvar novo usuário
@@ -46,43 +48,51 @@ public class BlogApplication {
 						service.convertCsvToXml();
 						break;
 					case 5:
-						// Opção 5: Sair do programa
+						// Opção 5: Comprimir CSV
+						service.compressCsv();
+						break;
+					case 6:
+						// Opção 6: Mostrar Hash SHA256 do CSV
+						service.showHashCsv();
+						break;
+					case 7:
+						// Opção 7: Sair do programa
 						System.out.println("Saindo...");
 						break;
 					default:
 						System.out.println("Opção inválida. Tente novamente.");
 				}
-			} else{
+			} else {
 				scanner.nextLine();
 				choice = 0;
 			}
-		} 
-		
+		}
+
 		scanner.close();
 	}
 
 	private static void saveNewUser(DataService service, Scanner scanner) {
-        // Scanner scanner = new Scanner(System.in);
-        System.out.println("Digite os dados do novo usuário:");
+		// Scanner scanner = new Scanner(System.in);
+		System.out.println("Digite os dados do novo usuário:");
 
-        System.out.print("Nome: ");
-        String name = scanner.nextLine();
+		System.out.print("Nome: ");
+		String name = scanner.nextLine();
 
-        System.out.print("Senha: ");
-        String password = scanner.nextLine();
+		System.out.print("Senha: ");
+		String password = scanner.nextLine();
 
-        System.out.print("Email: ");
-        String email = scanner.nextLine();
+		System.out.print("Email: ");
+		String email = scanner.nextLine();
 
-        System.out.print("Bio: ");
-        String bio = scanner.nextLine();
+		System.out.print("Bio: ");
+		String bio = scanner.nextLine();
 
-        System.out.print("Taxa: ");
-        float rate = scanner.nextFloat();
+		System.out.print("Taxa: ");
+		float rate = scanner.nextFloat();
 
-        User newUser = new User(name, password, email, bio, rate);
-        service.saveUser(newUser);
+		User newUser = new User(name, password, email, bio, rate);
+		service.saveUser(newUser);
 		// scanner.close();
-    }
+	}
 
 }

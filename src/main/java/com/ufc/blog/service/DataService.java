@@ -1,6 +1,8 @@
 package com.ufc.blog.service;
 
+import com.ufc.blog.dao.CompressCsv;
 import com.ufc.blog.dao.ConvertCsvJsonXml;
+import com.ufc.blog.dao.HashCsv;
 import com.ufc.blog.dao.ReadUserCsv;
 import com.ufc.blog.dao.WriteUserCsv;
 import com.ufc.blog.models.User;
@@ -24,6 +26,14 @@ public class DataService {
 
     public void convertCsvToXml() {
         convertCsvJson.convertCsvToXml();
+    }
+
+    public void compressCsv() {
+        CompressCsv.ziparArquivoCsvDeUsuarios();
+    }
+
+    public void showHashCsv() {
+        HashCsv.mostrarHashCsv();
     }
 
 }
