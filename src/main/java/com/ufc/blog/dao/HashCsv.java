@@ -6,24 +6,25 @@
 
 package com.ufc.blog.dao;
 
-import java.io.BufferedInputStream;
+import java.io.File;
 import java.io.FileInputStream;
 import java.math.BigInteger;
 import java.security.MessageDigest;
-import java.util.Base64;
 
 // Sarah
 public class HashCsv {
     public static void mostrarHashCsv() {
         try {
-            byte[] buffer = new byte[8192];
-            int count;
+            File arquivo = new File("data.csv");
+            FileInputStream fis = new FileInputStream(arquivo);
             MessageDigest digest = MessageDigest.getInstance("SHA-256");
-            BufferedInputStream bis = new BufferedInputStream(new FileInputStream("data.csv"));
-            while ((count = bis.read(buffer)) > 0) {
-                digest.update(buffer, 0, count);
+            
+            byte[] buffer = new byte[8192];
+            int len;
+            while ((len = fis.read(buffer)) > 0) {
+                digest.update(buffer, 0, len);
             }
-            bis.close();
+            fis.close();
 
             byte[] hash = digest.digest();
             System.out.println("O hash do arquivo é o seguinte: " + new BigInteger(1, hash).toString(16).toUpperCase());
