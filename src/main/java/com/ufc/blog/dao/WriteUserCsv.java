@@ -13,8 +13,11 @@ public class WriteUserCsv {
             File file = new File(filename);
             if (file.createNewFile()) {
                 System.out.println("Arquivo criado com sucesso.");
+                FileWriter writer = new FileWriter("data.csv", true);
+                writer.append("name,password,email,bio,rate\n");
+                writer.close();
             } else {
-                System.out.println("O arquivo já existe.");
+                // System.out.println("O arquivo já existe.");
             }
         } catch (Exception e) {
             System.out.println("Ocorreu um erro ao criar o arquivo: " + e.getMessage());
@@ -23,6 +26,7 @@ public class WriteUserCsv {
 
     public void saveUser(User user) {
         try {
+            newFile("data.csv");
             FileWriter writer = new FileWriter("data.csv", true);
             writer.append(user.toStringCsv());
             writer.close();
