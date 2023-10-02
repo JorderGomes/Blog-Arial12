@@ -10,6 +10,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
@@ -25,12 +26,12 @@ public class CompressCsv {
     public static void ziparArquivoCsvDeUsuarios() {
         try {
             File arquivo = new File("data.csv");
-            String nomeDoZip = "data.zip";
-            FileOutputStream fos = new FileOutputStream(nomeDoZip);
-            ZipOutputStream zos = new ZipOutputStream(fos);
+            FileOutputStream fos = new FileOutputStream("data.zip");
+            ZipOutputStream zos = new ZipOutputStream(fos, StandardCharsets.UTF_8);
 
-            ZipEntry ze = new ZipEntry(arquivo.getName());
-            zos.putNextEntry(ze);
+            ZipEntry entradaDoZip = new ZipEntry(arquivo.getName());
+            zos.putNextEntry(entradaDoZip);
+
             FileInputStream fis = new FileInputStream(arquivo);
             byte[] buffer = new byte[8192];
             int len;

@@ -1,0 +1,214 @@
+name,password,email,bio,rate
+Sarah,asdasd,sarah@alu.ufc.br,sou estudante,10.0
+João da Silva,1234567890,joao@email.com,João é um entusiasta da tecnologia e ama programação.,0.5
+Maria Santos,9876543210,maria@email.com,Maria é uma amante da natureza e gosta de fazer trilhas.,0.3
+Carlos Oliveira,5551234567,carlos@email.com,Carlos é um chef talentoso e adora cozinhar pratos gourmet.,0.8
+Ana Pereira,2223334444,ana@email.com,Ana é uma artista que pinta quadros inspiradores.,0.2
+Paulo Rodrigues,7778889999,paulo@email.com,Paulo é um músico talentoso que toca violão.,0.4
+Camila Lima,1112223333,camila@email.com,Camila é uma cientista de dados apaixonada por análise de dados.,0.6
+Fernando Costa,3335557777,fernando@email.com,Fernando é um escritor renomado e autor de best-sellers.,0.7
+Amanda Martins,5556667777,amanda@email.com,Amanda é uma corredora de maratona dedicada.,0.1
+Luisa Alves,1112223334,luisa@email.com,Luisa é uma ativista ambiental apaixonada por preservação da natureza.,0.3
+Gabriel Silva,9998887777,gabriel@email.com,Gabriel é um empreendedor de sucesso.,0.9
+Lucas Pereira,6665554444,lucas@email.com,Lucas é um fotógrafo talentoso que captura momentos especiais.,0.4
+Carolina Sousa,7776665555,carolina@email.com,Carolina é uma engenheira civil que constrói projetos incríveis.,0.6
+Eduardo Santos,12332345678,eduardo@email.com,Eduardo é um amante da música clássica e toca piano.,0.2
+Mariana Ferreira,2223334445,mariana@email.com,Mariana é uma designer de moda com estilo único.,0.5
+Rafael Lima,5554443333,rafael@email.com,Rafael é um cientista social que estuda culturas indígenas.,0.3
+Isabela Gomes,4445556666,isabela@email.com,Isabela é uma nutricionista que promove uma alimentação saudável.,0.2
+Henrique Vieira,3336667778,henrique@email.com,Henrique é um astrônomo que observa estrelas.,0.4
+Sofia Rodrigues,7778889990,sofia@email.com,Sofia é uma empresária de moda com sua própria marca.,0.7
+Ricardo Almeida,11155557770,ricardo@email.com,Ricardo é um entusiasta de tecnologia e programador.,0.5
+Laura Castro,33334445550,laura@email.com,Laura é uma bióloga marinha que estuda os oceanos.,0.3
+Gustavo Oliveira,22255557770,gustavo@email.com,Gustavo é um artista plástico que cria esculturas impressionantes.,0.6
+Beatriz Carvalho,99966665550,beatriz@email.com,Beatriz é uma dançarina profissional de balé.,0.4
+Patricia Correia,11123444440,patricia@email.com,Patricia é uma médica dedicada à saúde infantil.,0.8
+Marcos Fonseca,5557778880,marcos@email.com,Marcos é um chef de cozinha com estrela Michelin.,0.9
+Renata Ramos,11144445550,renata@email.com,Renata é uma psicóloga que ajuda pessoas a superar desafios.,0.2
+Alexandre Costa,44477778880,alexandre@email.com,Alexandre é um músico de rock que toca guitarra.,0.7
+Thais Ferreira,33355556660,thais@email.com,Thais é uma engenheira de software que desenvolve aplicativos.,0.6
+Luciana Santos,22244445550,luciana@email.com,Luciana é uma bióloga que estuda a vida selvagem.,0.4
+Diego Oliveira,77744445550,diego@email.com,Diego é um professor de matemática apaixonado por ensinar.,0.3
+Sandra Santos,77755556666,sandra@email.com,Sandra é uma advogada especializada em direito civil.,0.4
+Roberto Alves,11144447777,roberto@email.com,Roberto é um engenheiro elétrico apaixonado por automação.,0.3
+Cristina Lima,55544445550,cristina@email.com,Cristina é uma terapeuta holística que promove o bem-estar.,0.2
+Fábio Oliveira,22244447777,fabio@email.com,Fábio é um jornalista investigativo premiado.,0.7
+Patrícia Pereira,11144448888,patricia@email.com,Patrícia é uma arquiteta que cria projetos sustentáveis.,0.6
+Antônio Rodrigues,55544445551,antonio@email.com,Antônio é um mecânico de automóveis experiente.,0.5
+Carla Ferreira,44444445550,carla@email.com,Carla é uma consultora de marketing digital.,0.4
+Marcos Vieira,44477778881,marcos@email.com,Marcos é um professor universitário de história.,0.8
+Luciana Costa,55555551111,luciana@email.com,Luciana é uma psicóloga infantil muito dedicada.,0.3
+Pedro Gonçalves,44477778882,pedro@email.com,Pedro é um cientista de dados apaixonado por análise estatística.,0.6
+Mariana Rocha,55555551112,mariana@email.com,Mariana é uma cantora de ópera talentosa.,0.2
+José Silva,44477778883,jose@email.com,José é um veterinário que cuida de animais de estimação.,0.4
+Helena Oliveira,33333332222,helena@email.com,Helena é uma engenheira de software que desenvolve aplicativos móveis.,0.6
+Ricardo Pereira,55555551113,ricardo@email.com,Ricardo é um economista que trabalha com políticas públicas.,0.3
+Juliana Castro,22222221111,juliana@email.com,Juliana é uma fotógrafa de casamentos muito requisitada.,0.7
+André Santos,55555551114,andre@email.com,André é um chef de cozinha que cria pratos gourmet.,0.5
+Sílvia Costa,11111113333,silvia@email.com,Sílvia é uma escritora de ficção científica premiada.,0.2
+Leonardo Almeida,55555551115,leonardo@email.com,Leonardo é um cirurgião plástico reconhecido.,0.9
+Fernanda Lima,22222221112,fernanda@email.com,Fernanda é uma ambientalista que luta pela preservação da Amazônia.,0.4
+Gustavo Rodrigues,55555551116,gustavo@email.com,Gustavo é um geólogo que estuda terremotos.,0.6
+Viviane Ferreira,44444441111,viviane@email.com,Viviane é uma terapeuta ocupacional que ajuda crianças com necessidades especiais.,0.3
+Raul Oliveira,55555551117,raul@email.com,Raul é um engenheiro de petróleo que trabalha em plataformas offshore.,0.7
+Elena Pereira,11111113334,elena@email.com,Elena é uma dançarina de flamenco apaixonada.,0.4
+Adriano Castro,55555551118,adriano@email.com,Adriano é um programador que desenvolve jogos de realidade virtual.,0.8
+Isabel Alves,33333332223,isabel@email.com,Isabel é uma psicóloga que atende pacientes com transtornos de ansiedade.,0.2
+Rafaela Santos,55555551119,rafaela@email.com,Rafaela é uma bióloga que estuda ecossistemas aquáticos.,0.5
+Luiz Oliveira,44444441112,luiz@email.com,Luiz é um historiador que pesquisa a história antiga.,0.3
+Aline Costa,55555551120,aline@email.com,Aline é uma médica que trabalha em áreas rurais, oferecendo cuidados de saúde.,0.6
+Mário Rodrigues,11111113335,mario@email.com,Mário é um astrônomo amador que observa o céu noturno.,0.2
+Cecília Lima,55555551121,cecilia@email.com,Cecília é uma escritora de livros infantis.,0.4
+Tatiana Ferreira,33333332224,tatiana@email.com,Tatiana é uma nutricionista esportiva que trabalha com atletas profissionais.,0.7
+Felipe Castro,55555551122,felipe@email.com,Felipe é um cineasta que cria documentários impactantes.,0.6
+Sônia Almeida,44444441113,sonia@email.com,Sônia é uma professora de literatura que inspira seus alunos.,0.4
+Rogério Silva,55555551123,rogerio@email.com,Rogério é um botânico que estuda plantas raras da Amazônia.,0.3
+Lucas Ferreira,11111113336,lucas@email.com,Lucas é um cientista político que pesquisa sistemas de governo.,0.2
+Margarida Santos,55555551124,margarida@email.com,Margarida é uma escultora que cria obras de arte em madeira.,0.5
+Beatriz Oliveira,33333332225,beatriz@email.com,Beatriz é uma advogada de direitos humanos que luta pela justiça.,0.3
+Robson Lima,55555551125,robson@email.com,Robson é um engenheiro de tráfego que melhora as estradas.,0.6
+Vanessa Pereira,44444441114,vanessa@email.com,Vanessa é uma terapeuta familiar que ajuda a resolver conflitos.,0.4
+César Castro,55555551126,cesar@email.com,César é um designer gráfico talentoso.,0.7
+Patrícia Costa,11111113337,patricia@email.com,Patrícia é uma psicóloga clínica que trabalha com pacientes com depressão.,0.6
+Renato Oliveira,55555551127,renato@email.com,Renato é um professor de matemática que torna a matéria divertida.,0.4
+Sara Almeida,44444441115,sara@email.com,Sara é uma historiadora da arte especializada em Renascimento italiano.,0.3
+Anderson Santos,55555551128,anderson@email.com,Anderson é um médico cirurgião que salva vidas.,0.2
+Larissa Lima,11111113338,larissa@email.com,Larissa é uma produtora de eventos que organiza casamentos deslumbrantes.,0.5
+Joaquim Castro,55555551129,joaquim@email.com,Joaquim é um físico que pesquisa partículas subatômicas.,0.3
+Camila Oliveira,33333332226,camila@email.com,Camila é uma psicóloga infantil que ajuda crianças com autismo.,0.6
+Eduardo Rodrigues,55555551130,eduardo@email.com,Eduardo é um escritor de ficção científica que cria mundos imaginários.,0.4
+Marta Ferreira,11111113339,marta@email.com,Marta é uma terapeuta de casal que fortalece relacionamentos.,0.7
+Felipe Oliveira,55555551131,felipe@email.com,Felipe é um engenheiro de som que trabalha com bandas famosas.,0.6
+Aline Lima,44444441116,aline@email.com,Aline é uma bióloga marinha que estuda recifes de coral.,0.4
+Marcelo Santos,55555551132,marcelo@email.com,Marcelo é um chef de pastelaria premiado.,0.3
+Amanda Pereira,11111113340,amanda@email.com,Amanda é uma jornalista de investigação que revela escândalos.,0.2
+Lucas Castro,55555551133,lucas@email.com,Lucas é um cientista da computação que desenvolve inteligência artificial.,0.5
+Rosa Oliveira,33333332227,rosa@email.com,Rosa é uma terapeuta ocupacional que ajuda crianças com paralisia cerebral.,0.3
+Bruno Rodrigues,55555551134,bruno@email.com,Bruno é um piloto de avião comercial.,0.6
+Renata Lima,44444441117,renata@email.com,Renata é uma arquiteta de interiores que cria espaços aconchegantes.,0.4
+Carlos Almeida,55555551135,carlos@email.com,Carlos é um químico que pesquisa novos materiais.,0.7
+Isabela Santos,11111113341,isabela@email.com,Isabela é uma atriz de teatro renomada.,0.6
+Gustavo Ferreira,55555551136,gustavo@email.com,Gustavo é um engenheiro de tráfego que otimiza sistemas de transporte.,0.4
+Lídia Costa,33333332228,lidia@email.com,Lídia é uma psicóloga forense que ajuda a resolver crimes.,0.3
+André Lima,55555551137,andre@email.com,André é um pintor que cria obras de arte abstrata.,0.2
+Tatiana Santos,44444441118,tatiana@email.com,Tatiana é uma nutricionista que promove hábitos alimentares saudáveis.,0.5
+Rafael Almeida,55555551138,rafael@email.com,Rafael é um treinador de futebol que molda jovens talentos.,0.3
+Camila Costa,11111113342,camila@email.com,Camila é uma terapeuta de fala que ajuda crianças com dificuldades de comunicação.,0.6
+Luis Castro,55555551139,luis@email.com,Luis é um advogado criminal que defende os direitos dos acusados.,0.4
+Silvana Lima,33333332229,silvana@email.com,Silvana é uma veterinária que cuida de animais de fazenda.,0.7
+Ricardo Pereira,55555551140,ricardo@email.com,Ricardo é um paleontólogo que estuda fósseis de dinossauros.,0.6
+Carolina Santos,44444441119,carolina@email.com,Carolina é uma pilota de corridas de carros de turismo.,0.4
+Eduardo Oliveira,55555551141,eduardo@email.com,Eduardo é um astrônomo que pesquisa estrelas em formação.,0.3
+Mariana Alves,11111113343,mariana@email.com,Mariana é uma pediatra que cuida de crianças em comunidades carentes.,0.2
+Bruno Lima,55555551142,bruno@email.com,Bruno é um jornalista de política que cobre eleições.,0.5
+Paula Castro,55555551143,paula@email.com,Paula é uma bióloga que estuda ecossistemas marinhos.,0.3
+Alexandre Almeida,11111113344,alexandre@email.com,Alexandre é um chef de cozinha que cria pratos veganos.,0.6
+Sandra Lima,55555551144,sandra@email.com,Sandra é uma psicóloga escolar que ajuda alunos com dificuldades de aprendizado.,0.4
+Felipe Santos,33333332230,felipe@email.com,Felipe é um designer de moda que cria roupas exclusivas.,0.7
+Lucas Oliveira,55555551145,lucas@email.com,Lucas é um cientista de dados que desenvolve algoritmos de machine learning.,0.6
+Carolina Alves,11111113345,carolina@email.com,Carolina é uma bailarina de dança contemporânea.,0.4
+Thiago Lima,55555551146,thiago@email.com,Thiago é um engenheiro civil que projeta pontes e viadutos.,0.3
+Renata Santos,44444441120,renata@email.com,Renata é uma terapeuta ocupacional que trabalha com idosos.,0.2
+André Rodrigues,55555551147,andre@email.com,André é um escritor de livros de mistério.,0.5
+Mariana Oliveira,33333332231,mariana@email.com,Mariana é uma terapeuta familiar que ajuda famílias a se comunicarem melhor.,0.3
+Rafaela Lima,55555551148,rafaela@email.com,Rafaela é uma arquiteta paisagista que cria jardins deslumbrantes.,0.7
+Luiz Alves,11111113346,luiz@email.com,Luiz é um músico que toca saxofone em uma banda de jazz.,0.6
+Camila Pereira,55555551149,camila@email.com,Camila é uma astrônoma que estuda buracos negros.,0.4
+Gustavo Lima,44444441121,gustavo@email.com,Gustavo é um advogado de direitos humanos que luta contra a discriminação.,0.3
+Larissa Santos,55555551150,larissa@email.com,Larissa é uma fotógrafa de moda que trabalha com celebridades.,0.2
+Carlos Almeida,11111113347,carlos@email.com,Carlos é um físico teórico que pesquisa teorias da relatividade.,0.5
+Amanda Oliveira,55555551151,amanda@email.com,Amanda é uma terapeuta de casal que ajuda casais a fortalecerem seus relacionamentos.,0.3
+Roberto Castro,33333332232,roberto@email.com,Roberto é um paleontólogo que escava fósseis de dinossauros.,0.6
+Sônia Lima,55555551152,sonia@email.com,Sônia é uma cantora de ópera que se apresenta em teatros renomados.,0.4
+Fernando Alves,11111113348,fernando@email.com,Fernando é um consultor financeiro que ajuda empresas a alcançarem o sucesso.,0.7
+Laura Santos,55555551153,laura@email.com,Laura é uma terapeuta de fala que trabalha com crianças com autismo.,0.6
+Felipe Oliveira,44444441122,felipe@email.com,Felipe é um engenheiro de software que desenvolve aplicativos móveis.,0.4
+Aline Lima,55555551154,aline@email.com,Aline é uma historiadora que pesquisa a Idade Média.,0.3
+Ricardo Castro,11111113349,ricardo@email.com,Ricardo é um chef de confeitaria que cria bolos decorativos.,0.2
+Patrícia Santos,55555551155,patricia@email.com,Patrícia é uma médica veterinária que cuida de animais exóticos.,0.5
+Marcos Lima,33333332233,marcos@email.com,Marcos é um arquiteto que projeta edifícios sustentáveis.,0.3
+Eduarda Alves,55555551156,eduarda@email.com,Eduarda é uma professora de yoga que promove o bem-estar físico e mental.,0.6
+Thiago Oliveira,44444441123,thiago@email.com,Thiago é um cientista político que estuda sistemas de governo.,0.4
+Carla Santos,55555551157,carla@email.com,Carla é uma nutricionista esportiva que trabalha com atletas de alto rendimento.,0.3
+Rafael Almeida,11111113350,rafael@email.com,Rafael é um arqueólogo que escava sítios arqueológicos antigos.,0.2
+Mariana Lima,55555551158,mariana@email.com,Mariana é uma terapeuta ocupacional que ajuda pessoas com deficiência a viverem de forma independente.,0.5
+Bruno Castro,33333332234,bruno@email.com,Bruno é um físico nuclear que estuda a estrutura do núcleo atômico.,0.3
+Luciana Oliveira,55555551159,luciana@email.com,Luciana é uma treinadora de cães que ajuda animais a se comportarem melhor.,0.6
+Roberto Alves,44444441124,roberto@email.com,Roberto é um geólogo que pesquisa vulcões ativos.,0.4
+André Santos,55555551160,andre@email.com,André é um médico cirurgião que realiza cirurgias de alta complexidade.,0.3
+Tatiana Lima,11111113351,tatiana@email.com,Tatiana é uma psicóloga infantil que ajuda crianças com dificuldades emocionais.,0.2
+Gustavo Oliveira,55555551161,gustavo@email.com,Gustavo é um jornalista de viagens que explora destinos exóticos.,0.5
+Viviane Almeida,33333332235,viviane@email.com,Viviane é uma terapeuta de casal que auxilia casais a superarem crises.,0.3
+Mário Castro,55555551162,mario@email.com,Mário é um engenheiro de petróleo que trabalha em plataformas offshore.,0.6
+Patrícia Lima,44444441125,patricia@email.com,Patrícia é uma enfermeira que trabalha em unidades de cuidados intensivos.,0.4
+Felipe Santos,55555551163,felipe@email.com,Felipe é um fotógrafo de vida selvagem que captura a beleza da natureza.,0.3
+Carla Alves,11111113352,carla@email.com,Carla é uma engenheira de controle de qualidade que garante produtos de alta qualidade.,0.2
+Leonardo Oliveira,55555551164,leonardo@email.com,Leonardo é um músico que toca violino em uma orquestra sinfônica.,0.5
+Mariana Santos,33333332236,mariana@email.com,Mariana é uma terapeuta ocupacional que ajuda crianças com paralisia cerebral.,0.3
+Rafael Lima,55555551165,rafael@email.com,Rafael é um biólogo que estuda a biodiversidade da Floresta Amazônica.,0.6
+Isabela Alves,44444441126,isabela@email.com,Isabela é uma professora de matemática que torna a matéria interessante para seus alunos.,0.4
+Joaquim Oliveira,55555551166,joaquim@email.com,Joaquim é um antropólogo que pesquisa culturas indígenas na Amazônia.,0.3
+Amanda Lima,11111113353,amanda@email.com,Amanda é uma fisioterapeuta que ajuda pessoas a se recuperarem de lesões.,0.2
+Lucas Almeida,55555551167,lucas@email.com,Lucas é um cientista de dados que desenvolve modelos de previsão do tempo.,0.5
+Camila Castro,33333332237,camila@email.com,Camila é uma psicóloga clínica que oferece terapia individual e de grupo.,0.3
+André Santos,55555551168,andre@email.com,André é um escritor de romances históricos que cativam os leitores.,0.6
+Marta Lima,44444441127,marta@email.com,Marta é uma enfermeira especializada em cuidados intensivos.,0.4
+Fernando Alves,55555551169,fernando@email.com,Fernando é um cientista social que estuda a dinâmica das cidades.,0.3
+Larissa Oliveira,11111113354,larissa@email.com,Larissa é uma professora de dança que ensina salsa e samba.,0.2
+Gustavo Lima,55555551170,gustavo@email.com,Gustavo é um engenheiro elétrico que projeta sistemas de energia renovável.,0.5
+Carolina Castro,33333332238,carolina@email.com,Carolina é uma advogada de propriedade intelectual que protege marcas famosas.,0.3
+Roberto Santos,55555551171,roberto@email.com,Roberto é um piloto de helicóptero que realiza resgates em áreas remotas.,0.6
+Sílvia Almeida,44444441128,silvia@email.com,Sílvia é uma terapeuta holística que promove o equilíbrio corpo-mente-espírito.,0.4
+Ricardo Lima,55555551172,ricardo@email.com,Ricardo é um cientista da computação que pesquisa inteligência artificial.,0.3
+Patrícia Oliveira,11111113355,patricia@email.com,Patrícia é uma consultora de imagem que ajuda pessoas a se vestirem com confiança.,0.2
+Marcos Castro,55555551173,marcos@email.com,Marcos é um chef de cozinha que cria experiências gastronômicas únicas.,0.5
+Renata Santos,33333332239,renata@email.com,Renata é uma terapeuta ocupacional que trabalha com idosos em lares de cuidados.,0.3
+Bruno Alves,55555551174,bruno@email.com,Bruno é um fotógrafo de casamentos que captura momentos especiais.,0.6
+Tatiana Lima,44444441129,tatiana@email.com,Tatiana é uma psicóloga clínica que ajuda pessoas a superarem traumas.,0.4
+Lucas Oliveira,55555551175,lucas@email.com,Lucas é um educador ambiental que ensina sobre conservação da natureza.,0.3
+Aline Santos,11111113356,aline@email.com,Aline é uma engenheira de controle de qualidade que garante a qualidade dos produtos.,0.2
+Felipe Almeida,55555551176,felipe@email.com,Felipe é um empreendedor social que ajuda comunidades carentes.,0.5
+Mariana Lima,33333332240,mariana@email.com,Mariana é uma designer de interiores que cria espaços funcionais e estilosos.,0.3
+Rafaela Oliveira,55555551177,rafaela@email.com,Rafaela é uma arquiteta que projeta edifícios sustentáveis e eficientes.,0.6
+Roberto Santos,44444441130,roberto@email.com,Roberto é um médico que realiza cirurgias plásticas estéticas.,0.4
+André Alves,55555551178,andre@email.com,André é um músico de jazz que toca saxofone em uma banda local.,0.3
+Tatiana Castro,11111113357,tatiana@email.com,Tatiana é uma cientista de alimentos que desenvolve novas receitas saudáveis.,0.2
+Larissa Lima,55555551179,larissa@email.com,Larissa é uma fisioterapeuta que ajuda pacientes com problemas respiratórios.,0.5
+Lucas Oliveira,33333332241,lucas@email.com,Lucas é um designer gráfico que cria identidades visuais marcantes.,0.3
+Camila Santos,55555551180,camila@email.com,Camila é uma psicóloga infantil que auxilia crianças com transtornos do espectro autista.,0.6
+Gustavo Lima,44444441131,gustavo@email.com,Gustavo é um terapeuta ocupacional que trabalha com crianças com deficiências físicas.,0.4
+Roberto Alves,55555551181,roberto@email.com,Roberto é um professor de matemática que torna a matemática acessível e divertida.,0.3
+André Castro,11111113358,andre@email.com,André é um biólogo marinho que pesquisa a vida marinha em recifes de coral.,0.2
+Marta Santos,55555551182,marta@email.com,Marta é uma terapeuta familiar que ajuda famílias a resolverem conflitos.,0.5
+Felipe Oliveira,33333332242,felipe@email.com,Felipe é um antropólogo que estuda as culturas indígenas da Amazônia.,0.3
+Carolina Almeida,55555551183,carolina@email.com,Carolina é uma enfermeira que trabalha em unidades de terapia intensiva.,0.6
+Ricardo Lima,44444441132,ricardo@email.com,Ricardo é um treinador de futebol que desenvolve jovens talentos.,0.4
+Mariana Santos,55555551184,mariana@email.com,Mariana é uma veterinária que cuida de animais de estimação.,0.3
+Roberto Oliveira,11111113359,roberto@email.com,Roberto é um chef de cozinha que cria pratos gourmet exclusivos.,0.2
+André Almeida,55555551185,andre@email.com,André é um astrônomo amador que observa o céu noturno.,0.5
+Tatiana Lima,33333332243,tatiana@email.com,Tatiana é uma psicóloga clínica que ajuda pacientes com transtornos de ansiedade.,0.3
+Lucas Oliveira,55555551186,lucas@email.com,Lucas é um cientista político que pesquisa sistemas de governo em países em desenvolvimento.,0.6
+Camila Santos,44444441133,camila@email.com,Camila é uma terapeuta de casal que ajuda casais a superarem crises conjugais.,0.4
+Gustavo Lima,55555551187,gustavo@email.com,Gustavo é um cineasta que cria documentários inspiradores.,0.3
+Roberto Alves,11111113360,roberto@email.com,Roberto é um arqueólogo que escava sítios arqueológicos antigos.,0.2
+André Castro,55555551188,andre@email.com,André é um piloto de avião que voa em missões de resgate em áreas remotas.,0.5
+Marta Santos,33333332244,marta@email.com,Marta é uma terapeuta ocupacional que ajuda crianças com necessidades especiais.,0.3
+Felipe Oliveira,55555551189,felipe@email.com,Felipe é um engenheiro de software que desenvolve aplicativos móveis inovadores.,0.6
+Carolina Almeida,44444441134,carolina@email.com,Carolina é uma consultora de negócios que ajuda empresas a melhorarem seus processos.,0.4
+Ricardo Lima,55555551190,ricardo@email.com,Ricardo é um educador ambiental que ensina sobre a importância da conservação da natureza.,0.3
+Mariana Santos,11111113361,mariana@email.com,Mariana é uma professora de música que ensina piano e violino.,0.2
+Roberto Oliveira,55555551191,roberto@email.com,Roberto é um historiador que pesquisa a história da arte renascentista.,0.5
+André Almeida,33333332245,andre@email.com,André é um instrutor de ioga que promove o equilíbrio e a serenidade.,0.3
+Tatiana Lima,55555551192,tatiana@email.com,Tatiana é uma terapeuta de fala que ajuda crianças com dificuldades de comunicação.,0.6
+Lucas Oliveira,44444441135,lucas@email.com,Lucas é um especialista em marketing digital que cria estratégias de sucesso.,0.4
+Camila Santos,55555551193,camila@email.com,Camila é uma bióloga marinha que estuda a vida marinha em recifes de coral.,0.3
+Gustavo Lima,11111113362,gustavo@email.com,Gustavo é um escritor de ficção científica que cria mundos distópicos.,0.2
+Roberto Alves,55555551194,roberto@email.com,Roberto é um chef de confeitaria que cria bolos personalizados.,0.5
+André Castro,33333332246,andre@email.com,André é um defensor dos direitos humanos que luta contra a discriminação.,0.3
+Marta Santos,55555551195,marta@email.com,Marta é uma professora de educação física que incentiva um estilo de vida ativo.,0.6
+Felipe Oliveira,44444441136,felipe@email.com,Felipe é um cientista de dados que desenvolve modelos de previsão do mercado financeiro.,0.4
+Carolina Almeida,55555551196,carolina@email.com,Carolina é uma terapeuta ocupacional que trabalha com adultos em reabilitação.,0.3
+Ricardo Lima,11111113363,ricardo@email.com,Ricardo é um fotógrafo de moda que cria ensaios fotográficos memoráveis.,0.2
+Mariana Santos,55555551197,mariana@email.com,Mariana é uma terapeuta de casal que ajuda casais a melhorarem a comunicação.,0.5
+Roberto Oliveira,33333332247,roberto@email.com,Roberto é um arquiteto paisagista que projeta jardins sustentáveis.,0.3
+André Almeida,55555551198,andre@email.com,André é um professor universitário de literatura que inspira seus alunos.,0.6
