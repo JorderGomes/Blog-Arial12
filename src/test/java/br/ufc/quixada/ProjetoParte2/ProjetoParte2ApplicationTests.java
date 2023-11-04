@@ -1,10 +1,10 @@
-package com.ufc.blog;
+package br.ufc.quixada.ProjetoParte2;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BlogApplicationTests {
+class ProjetoParte2ApplicationTests {
 
 	@Test
 	void contextLoads() {
