@@ -11,11 +11,10 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(InsereUsers.class, args);
+		SpringApplication.run(BuscaUsers.class, args);
 	}
-
+	
 	public static void run(String... args) throws Exception{
-		
 	}
 
 }

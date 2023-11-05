@@ -17,8 +17,8 @@ import java.util.List;
 public class Post{
 
     @Id
-    @GeneratedValue (strategy = GenerationType.UUID)
-    private String id;
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    private Integer id;
 
     @ManyToOne
     private Usuario usuario;
