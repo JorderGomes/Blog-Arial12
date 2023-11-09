@@ -3,6 +3,8 @@ package br.ufc.quixada.blog.models;
 import java.io.Serializable;
 import java.util.Collection;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.*;
 
 import jakarta.persistence.*;
@@ -12,7 +14,7 @@ import jakarta.persistence.*;
 })
 
 @Entity
-@Table(name = "usuarios", schema = "projetoDSP")
+@Table(name = "usuarios", schema = "public")
 @Data
 @Getter
 @Setter
@@ -36,9 +38,11 @@ public class Usuario implements Serializable {
     private Double rate;
 
     @OneToMany(mappedBy = "usuario")
+    @JsonIgnore
     private Collection<Post> posts;
 
     @OneToMany(mappedBy = "usuario")
+    @JsonIgnore
     private Collection<Comentario> comentarios;
 
     @Override

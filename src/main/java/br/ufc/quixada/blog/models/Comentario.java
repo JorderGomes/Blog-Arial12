@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "comentarios", schema = "projetoDSP")
+@Table(name = "comentarios", schema = "public")
 @Data
 @Getter
 @Setter
@@ -16,6 +16,8 @@ public class Comentario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
+    private String corpo;
 
     @ManyToOne
     private Post post;

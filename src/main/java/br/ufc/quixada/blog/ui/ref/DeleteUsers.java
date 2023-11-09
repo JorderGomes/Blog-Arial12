@@ -1,4 +1,4 @@
-package br.ufc.quixada.blog.ui;
+package br.ufc.quixada.blog.ui.ref;
 
 import br.ufc.quixada.blog.dao.UserDAO;
 import org.springframework.beans.factory.annotation.Autowired;
