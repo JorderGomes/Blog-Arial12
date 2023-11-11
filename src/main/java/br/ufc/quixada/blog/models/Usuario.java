@@ -35,6 +35,8 @@ public class Usuario implements Serializable {
     private String email;
     
     private String bio;
+
+    @Column(columnDefinition = "double default 0.0")
     private Double rate;
 
     @OneToMany(mappedBy = "usuario")

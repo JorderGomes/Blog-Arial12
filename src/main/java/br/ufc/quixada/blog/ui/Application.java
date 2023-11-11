@@ -12,11 +12,10 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 public class Application {
 
 	public static void main(String[] args) {
-		
 		SpringApplicationBuilder builder = 
-			new SpringApplicationBuilder(Menu.class);
+			new SpringApplicationBuilder(Application.class);
 		builder.run(args);
-		
+		System.out.println("Api is up");
 	}
 	
 		

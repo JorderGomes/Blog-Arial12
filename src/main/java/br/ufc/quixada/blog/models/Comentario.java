@@ -1,6 +1,8 @@
 package br.ufc.quixada.blog.models;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -20,8 +22,10 @@ public class Comentario {
     private String corpo;
 
     @ManyToOne
+    @JsonIgnore
     private Post post;
 
     @ManyToOne
+    @JsonIgnore
     private Usuario usuario;
 }
