@@ -13,7 +13,7 @@ public interface CommentDAO extends JpaRepository<Comentario, Integer> {
 
     // @Query("")
     // @Query(value = "select count(id) from posts p", nativeQuery = true)
-    @Query(value = "select c from comentarios c  where c.post_id = :id_post", nativeQuery = true)
-    public List<Comentario> findByPost(int id_post);
+    @Query(value = "select * from comentarios where post_id = :post_id", nativeQuery = true)
+    public List<Comentario> findByPostId(int post_id);
 
 }

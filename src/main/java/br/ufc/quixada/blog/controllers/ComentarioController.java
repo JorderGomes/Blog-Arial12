@@ -48,8 +48,15 @@ public class ComentarioController {
 
     @GetMapping("/post/{postId}")
     public ResponseEntity<List<Comentario>> getComentariosByPostId(@PathVariable Integer postId) {
-        List<Comentario> comentarios = commentDAO.findByPost(postId);
-        return ResponseEntity.ok(comentarios);
+        Optional<Post> postOpt = postDAO.findById(postId);
+        if (postOpt.isPresent()){
+            Post post = postOpt.get();
+            return  ResponseEntity.ok(post.getComentarios());
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+        // List<Comentario> comentarios = commentDAO.findByPostId(postId);
+        // return;
     }
 
     @PostMapping
@@ -86,6 +93,8 @@ public class ComentarioController {
         Optional<Comentario> commentOpt = commentDAO.findById(id);
         if (commentOpt.isPresent()) {
             Comentario c = commentOpt.get();
+            c.setPost(null);
+            c.setUsuario(null);
             commentDAO.delete(c);
             return ResponseEntity.noContent().build();
         } else {

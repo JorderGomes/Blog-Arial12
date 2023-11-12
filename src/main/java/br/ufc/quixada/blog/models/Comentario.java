@@ -21,11 +21,11 @@ public class Comentario {
 
     private String corpo;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.REMOVE)
     @JsonIgnore
     private Post post;
 
-    @ManyToOne
-    @JsonIgnore
+    @ManyToOne(cascade = CascadeType.REMOVE)
+    // @JsonIgnore
     private Usuario usuario;
 }
