@@ -14,13 +14,13 @@
     </appender>
 
     <!-- Set the application log level to INFO -->
-    <root level="debug">
+    <root level="off">
         <appender-ref ref="STDOUT"/>
     </root>
 
     <!-- Set log level of Hibernate to WARN level -->
     <logger name="org.hibernate">
-        <level value="debug"/>
+        <level value="off"/>
     </logger>
 
 </configuration>

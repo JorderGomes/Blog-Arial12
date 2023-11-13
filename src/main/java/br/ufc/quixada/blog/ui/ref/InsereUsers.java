@@ -17,14 +17,14 @@ public class InsereUsers implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-        Usuario usuario = new Usuario(null,"Sarah esposa mais linda do mundo","Sarazinha123","sarahlindona1@gmail.com","Essa é Sarah, a mulher mais linda desse mundo",5.0,null,null);
-        userDAO.save(usuario);
+        // Usuario usuario = new Usuario(null,"Sarah esposa mais linda do mundo","Sarazinha123","sarahlindona1@gmail.com","Essa é Sarah, a mulher mais linda desse mundo",5.0,null,null);
+        // userDAO.save(usuario);
 
-        usuario = new Usuario(null,"Sarah esposa mais linda do mundo e especial demaise","Sarazinha123","sarahlindona2@gmail.com","Essa é Sarah, a mulher mais linda desse mundo",5.0,null,null);
-        userDAO.save(usuario);
+        // usuario = new Usuario(null,"Sarah esposa mais linda do mundo e especial demaise","Sarazinha123","sarahlindona2@gmail.com","Essa é Sarah, a mulher mais linda desse mundo",5.0,null,null);
+        // userDAO.save(usuario);
 
-        usuario = new Usuario(null,"Sarah esposa mais linda do mundo e especial demaise pra caraca","Sarazinha123","sarahlindona3@gmail.com","Essa é Sarah, a mulher mais linda desse mundo",5.0,null,null);
-        userDAO.save(usuario);
+        // usuario = new Usuario(null,"Sarah esposa mais linda do mundo e especial demaise pra caraca","Sarazinha123","sarahlindona3@gmail.com","Essa é Sarah, a mulher mais linda desse mundo",5.0,null,null);
+        // userDAO.save(usuario);
         System.out.println("Deu certo");
         System.out.println("Deu certo");
         System.out.println("Deu certo");

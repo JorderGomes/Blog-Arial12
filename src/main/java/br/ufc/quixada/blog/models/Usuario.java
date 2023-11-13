@@ -2,6 +2,7 @@ package br.ufc.quixada.blog.models;
 
 import java.io.Serializable;
 import java.util.Collection;
+import java.util.Date;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -10,7 +11,8 @@ import lombok.*;
 import jakarta.persistence.*;
 
 @NamedQueries({
-        @NamedQuery(name = "usuarioPorEmail", query = "select u from Usuario u where u.email = :email")
+        @NamedQuery(name = "buscarUsuarioPorEmail", query = "select u from Usuario u where u.email = :email")
+        ,@NamedQuery(name = "buscarPostsPorIdDeUsuario", query = "select u.posts from Usuario u where u.id = :id")
 })
 
 @Entity
@@ -23,7 +25,7 @@ import jakarta.persistence.*;
 public class Usuario implements Serializable {
 
     @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    @GeneratedValue (strategy = GenerationType.SEQUENCE)
     private Integer id;
     
     private String name;
@@ -38,6 +40,9 @@ public class Usuario implements Serializable {
 
     @Column(columnDefinition = "double default 0.0")
     private Double rate;
+
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date dataDeNascimento;
 
     @OneToMany(mappedBy = "usuario")
     @JsonIgnore

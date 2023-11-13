@@ -49,9 +49,9 @@ public class ComentarioController {
     @GetMapping("/post/{postId}")
     public ResponseEntity<List<Comentario>> getComentariosByPostId(@PathVariable Integer postId) {
         Optional<Post> postOpt = postDAO.findById(postId);
-        if (postOpt.isPresent()){
+        if (postOpt.isPresent()) {
             Post post = postOpt.get();
-            return  ResponseEntity.ok(post.getComentarios());
+            return ResponseEntity.ok(post.getComentarios());
         } else {
             return ResponseEntity.notFound().build();
         }
@@ -61,13 +61,12 @@ public class ComentarioController {
 
     @PostMapping
     public ResponseEntity<Comentario> createComentario(
-        @RequestBody Comentario comentario, 
-        @RequestParam int idPost, 
-        @RequestParam int idUsuario
-        ) {
+            @RequestBody Comentario comentario,
+            @RequestParam int idPost,
+            @RequestParam int idUsuario) {
         Optional<Post> postOpt = postDAO.findById(idPost);
         Optional<Usuario> usuarioOpt = userDAO.findById(idUsuario);
-        if (postOpt.isPresent() && usuarioOpt.isPresent()){
+        if (postOpt.isPresent() && usuarioOpt.isPresent()) {
             comentario.setPost(postOpt.get());
             comentario.setUsuario(usuarioOpt.get());
             Comentario novoComentario = commentDAO.save(comentario);
@@ -95,8 +94,14 @@ public class ComentarioController {
             Comentario c = commentOpt.get();
             c.setPost(null);
             c.setUsuario(null);
-            commentDAO.delete(c);
-            return ResponseEntity.noContent().build();
+            commentDAO.save(c);
+            commentOpt = commentDAO.findById(id);
+            if (commentOpt.isPresent()) {
+                commentDAO.delete(c);
+                return ResponseEntity.noContent().build();
+            } else {
+                return ResponseEntity.notFound().build();
+            }
         } else {
             return ResponseEntity.notFound().build();
         }

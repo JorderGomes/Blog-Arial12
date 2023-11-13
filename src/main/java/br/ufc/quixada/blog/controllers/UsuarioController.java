@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.ufc.quixada.blog.dao.UserDAO;
+import br.ufc.quixada.blog.models.Post;
 import br.ufc.quixada.blog.models.Usuario;
 
 @RestController
@@ -34,6 +35,16 @@ public class UsuarioController {
         return userDAO.findById(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
+    }
+
+     @GetMapping(value = "/{ano}")
+    public ResponseEntity<List<Usuario>> getUsuariosByAnoDeNascimento(@PathVariable Integer ano){
+        return ResponseEntity.ok(userDAO.buscarUsuariosPorAnoDeNascimentoSQLITE(ano));
+    }
+
+    @GetMapping(value = "/{id}/posts")
+    public ResponseEntity<List<Post>> getPostsByUsuario(@PathVariable Integer id){
+        return ResponseEntity.ok(userDAO.buscarPostsPorIdDeUsuario(id)); 
     }
 
     @PostMapping
