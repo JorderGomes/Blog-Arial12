@@ -37,7 +37,7 @@ public class UsuarioController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-     @GetMapping(value = "/{ano}")
+     @GetMapping(value = "/buscaPorAno/{ano}")
     public ResponseEntity<List<Usuario>> getUsuariosByAnoDeNascimento(@PathVariable Integer ano){
         return ResponseEntity.ok(userDAO.buscarUsuariosPorAnoDeNascimentoSQLITE(ano));
     }
