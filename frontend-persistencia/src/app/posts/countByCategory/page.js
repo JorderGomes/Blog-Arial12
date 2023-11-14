@@ -4,7 +4,7 @@ import Button from "@/components/Button";
 import SubPageContainer from "@/components/SubPageContainer";
 import axios from "axios";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const ContarPostsCategoriaPage = () => {
   const [categorias, setCategorias] = useState([]);
@@ -49,7 +49,7 @@ const ContarPostsCategoriaPage = () => {
           <tbody>
             {categorias.map((categoria, index) => {
               const categoriaDePost = categoria.categoria;
-              const count = categoria['count(id)'];
+              const count = categoria["count(id)"];
 
               return (
                 <tr key={categoriaDePost}>
