@@ -1,0 +1,14 @@
+version: '3.5'
+
+services:
+  postgres:
+    container_name: container-projeto-persistencia
+    image: postgres
+    environment:
+      POSTGRES_USER: 'persist'
+      POSTGRES_PASSWORD: 'persist'
+      POSTGRES_DB: 'dbpersist2023_2'
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./init:/docker-entrypoint-initdb.d/
