@@ -6,7 +6,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.1.5</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.ufc.quixada.blog</groupId>
 	<artifactId>ProjetoParte2</artifactId>
@@ -46,6 +46,15 @@
 			<artifactId>hibernate-community-dialects</artifactId>
 			<version>6.3.1.Final</version>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+
+
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
