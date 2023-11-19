@@ -1,4 +1,4 @@
-package br.ufc.quixada.blog.ui.ref;
+package br.ufc.quixada.blog.ui.testes;
 
 import br.ufc.quixada.blog.dao.PostDAO;
 import br.ufc.quixada.blog.dao.UserDAO;
