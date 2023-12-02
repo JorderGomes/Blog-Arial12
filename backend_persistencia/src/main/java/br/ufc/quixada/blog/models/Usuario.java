@@ -10,12 +10,14 @@ import com.fasterxml.jackson.annotation.*;
 import lombok.*;
 
 import jakarta.persistence.*;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 @NamedQueries({
         @NamedQuery(name = "buscarUsuarioPorEmail", query = "select u from Usuario u where u.email = :email")
         ,@NamedQuery(name = "buscarPostsPorIdDeUsuario", query = "select u.posts from Usuario u where u.id = :id")
 })
 
+@Document
 @Entity
 @Table(name = "usuarios", schema = "public")
 @Data
@@ -27,8 +29,8 @@ import jakarta.persistence.*;
 public class Usuario implements Serializable {
 
     @Id
-    @GeneratedValue (strategy = GenerationType.SEQUENCE)
-    private Integer id;
+	@GeneratedValue(strategy = GenerationType.UUID)
+	private String id;
     
     private String name;
 

@@ -5,12 +5,14 @@ import br.ufc.quixada.blog.models.Usuario;
 
 import java.util.List;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UserDaoRelacional extends JpaRepository<Usuario, Integer> {
+@Primary
+public interface UserDaoRelacional extends JpaRepository<Usuario, String> {
 
     public Usuario findFirstByEmail(String email);
 

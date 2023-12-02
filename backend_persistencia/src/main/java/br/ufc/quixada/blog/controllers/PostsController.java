@@ -20,16 +20,19 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.ufc.quixada.blog.dao.PostDAO;
+import br.ufc.quixada.blog.dao.UserDAO;
 // import br.ufc.quixada.blog.dao.relational.PostDaoRelacional;
-import br.ufc.quixada.blog.dao.relational.UserDaoRelacional;
 import br.ufc.quixada.blog.models.Post;
 import br.ufc.quixada.blog.models.Usuario;
+
+// import br.ufc.quixada.blog.dao.relational.UserDaoRelacional;
+
 
 @RestController
 @RequestMapping("/posts")
 public class PostsController {
     @Autowired
-    UserDaoRelacional userDAO;
+    UserDAO userDAO;
 
     @Autowired
     PostDAO postDAO;
@@ -72,7 +75,7 @@ public class PostsController {
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.CREATED)
-    public ResponseEntity<Post> savePost(@RequestBody Post post, @RequestParam Integer userId) {
+    public ResponseEntity<Post> savePost(@RequestBody Post post, @RequestParam String userId) {
         Optional<Usuario> usuarioOpt = userDAO.findById(userId);
         if (usuarioOpt.isPresent()) {
             post.setUsuario(usuarioOpt.get());

@@ -16,15 +16,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.ufc.quixada.blog.dao.relational.UserDaoRelacional;
+import br.ufc.quixada.blog.dao.UserDAO;
 import br.ufc.quixada.blog.models.Post;
 import br.ufc.quixada.blog.models.Usuario;
+
+// import br.ufc.quixada.blog.dao.relational.UserDaoRelacional;
 
 @RestController
 @RequestMapping("/usuarios")
 public class UsuarioController {
     @Autowired
-    UserDaoRelacional userDAO;
+    UserDAO userDAO;
 
     @Value("${spring.profiles.active}")
     private String databaseProfile;
@@ -35,7 +37,7 @@ public class UsuarioController {
     }
 
     @GetMapping(value = "/{id}")
-    public ResponseEntity<Usuario> getUsuario(@PathVariable Integer id){
+    public ResponseEntity<Usuario> getUsuario(@PathVariable String id){
         return userDAO.findById(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
@@ -50,7 +52,7 @@ public class UsuarioController {
     }
 
     @GetMapping(value = "/{id}/posts")
-    public ResponseEntity<List<Post>> getPostsByUsuario(@PathVariable Integer id){
+    public ResponseEntity<List<Post>> getPostsByUsuario(@PathVariable String id){
         return ResponseEntity.ok(userDAO.buscarPostsPorIdDeUsuario(id)); 
     }
 
@@ -62,7 +64,7 @@ public class UsuarioController {
     }
 
     @DeleteMapping(value = "/{id}")
-    public ResponseEntity<Void> deleteUsuario(@PathVariable Integer id){
+    public ResponseEntity<Void> deleteUsuario(@PathVariable String id){
         if (!userDAO.existsById(id)){
             return ResponseEntity.notFound().build();
         }
@@ -71,7 +73,7 @@ public class UsuarioController {
     }
 
     @PutMapping(value = "/{id}")
-    public ResponseEntity<Usuario> updateUsuario(@RequestBody Usuario usuario, @PathVariable Integer id){
+    public ResponseEntity<Usuario> updateUsuario(@RequestBody Usuario usuario, @PathVariable String id){
         if (!userDAO.existsById(id)){
             return ResponseEntity.notFound().build();
         }

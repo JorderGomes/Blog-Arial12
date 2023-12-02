@@ -14,6 +14,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
         ,@NamedQuery(name = "buscarComentariosPorIdDoPost", query = "select p.comentarios from Post p where p.id = :id")
 })
 
+@Document
 @Entity
 @Table(name = "posts", schema = "public")
 @Data
@@ -22,7 +23,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Document
 public class Post{
 
     @Id

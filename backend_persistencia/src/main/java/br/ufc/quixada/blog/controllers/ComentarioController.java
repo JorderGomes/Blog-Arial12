@@ -18,27 +18,31 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import org.springframework.web.bind.annotation.RestController;
 
-import br.ufc.quixada.blog.dao.relational.CommentDaoRelacional;
-import br.ufc.quixada.blog.dao.relational.PostDaoRelacional;
-import br.ufc.quixada.blog.dao.relational.UserDaoRelacional;
+import br.ufc.quixada.blog.dao.CommentDAO;
+import br.ufc.quixada.blog.dao.PostDAO;
+import br.ufc.quixada.blog.dao.UserDAO;
 import br.ufc.quixada.blog.models.Comentario;
 import br.ufc.quixada.blog.models.Post;
 import br.ufc.quixada.blog.models.Usuario;
+
+// import br.ufc.quixada.blog.dao.relational.CommentDaoRelacional;
+// import br.ufc.quixada.blog.dao.relational.PostDaoRelacional;
+// import br.ufc.quixada.blog.dao.relational.UserDaoRelacional;
 
 @RestController
 @RequestMapping("/comentarios")
 public class ComentarioController {
     @Autowired
-    UserDaoRelacional userDAO;
+    UserDAO userDAO;
 
     @Autowired
-    PostDaoRelacional postDAO;
+    PostDAO postDAO;
 
     @Autowired
-    CommentDaoRelacional commentDAO;
+    CommentDAO commentDAO;
 
     @GetMapping("/{id}")
-    public ResponseEntity<Comentario> getComentarioById(@PathVariable Integer id) {
+    public ResponseEntity<Comentario> getComentarioById(@PathVariable String id) {
         Optional<Comentario> comentarioOpt = commentDAO.findById(id);
         if (comentarioOpt.isPresent()) {
             return ResponseEntity.ok(comentarioOpt.get());
@@ -64,7 +68,7 @@ public class ComentarioController {
     public ResponseEntity<Comentario> createComentario(
             @RequestBody Comentario comentario,
             @RequestParam String idPost,
-            @RequestParam int idUsuario) {
+            @RequestParam String idUsuario) {
         Optional<Post> postOpt = postDAO.findById(idPost);
         Optional<Usuario> usuarioOpt = userDAO.findById(idUsuario);
         if (postOpt.isPresent() && usuarioOpt.isPresent()) {
@@ -79,10 +83,10 @@ public class ComentarioController {
 
     @PutMapping(value = "/{id}",consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Comentario> updateComentario(
-            @PathVariable int id,
+            @PathVariable String id,
             @RequestBody Comentario comentario,
             @RequestParam String idPost,
-            @RequestParam int idUsuario) {
+            @RequestParam String idUsuario) {
         Optional<Post> postOpt = postDAO.findById(idPost);
         Optional<Usuario> usuarioOpt = userDAO.findById(idUsuario);
         if (postOpt.isPresent() && usuarioOpt.isPresent()) {
@@ -101,7 +105,7 @@ public class ComentarioController {
     };
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteComentario(@PathVariable Integer id) {
+    public ResponseEntity<Void> deleteComentario(@PathVariable String id) {
         Optional<Comentario> commentOpt = commentDAO.findById(id);
         if (commentOpt.isPresent()) {
             Comentario c = commentOpt.get();
@@ -110,7 +114,7 @@ public class ComentarioController {
             commentDAO.save(c);
             commentOpt = commentDAO.findById(id);
             if (commentOpt.isPresent()) {
-                commentDAO.delete(c);
+                commentDAO.deleteById(id);
                 return ResponseEntity.noContent().build();
             } else {
                 return ResponseEntity.notFound().build();
