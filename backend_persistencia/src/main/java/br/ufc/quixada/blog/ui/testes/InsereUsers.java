@@ -1,8 +1,8 @@
 package br.ufc.quixada.blog.ui.testes;
 
-import br.ufc.quixada.blog.dao.UserDAO;
-import br.ufc.quixada.blog.models.Usuario;
-import org.springframework.beans.factory.annotation.Autowired;
+// import br.ufc.quixada.blog.dao.UserDAO;
+// import br.ufc.quixada.blog.models.Usuario;
+// import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.ComponentScan;
 
@@ -12,8 +12,8 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan("br.ufc.quixada.blog")
 public class InsereUsers implements CommandLineRunner {
 
-    @Autowired
-    private UserDAO userDAO;
+    // @Autowired
+    // private UserDAO userDAO;
 
     @Override
     public void run(String... args) {

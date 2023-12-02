@@ -3,11 +3,11 @@ package br.ufc.quixada.blog.models;
 
 import java.sql.Timestamp;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+// import com.fasterxml.jackson.annotation.JsonBackReference;
+// import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+// import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -30,10 +30,11 @@ public class Comentario {
     @Temporal(TemporalType.TIMESTAMP)
     private Timestamp dataDeCriacao;
 
+    @JsonIgnore
     @ManyToOne(cascade = CascadeType.REMOVE)
     private Post post;
 
-
+    @JsonIgnore
     @ManyToOne(cascade = CascadeType.REMOVE)
     private Usuario usuario;
 }

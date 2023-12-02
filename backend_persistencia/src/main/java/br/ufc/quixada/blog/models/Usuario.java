@@ -3,7 +3,7 @@ package br.ufc.quixada.blog.models;
 import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.Collection;
-import java.sql.Date;
+// import java.sql.Date;
 
 import com.fasterxml.jackson.annotation.*;
 
@@ -23,7 +23,7 @@ import jakarta.persistence.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
+// @Builder
 public class Usuario implements Serializable {
 
     @Id
