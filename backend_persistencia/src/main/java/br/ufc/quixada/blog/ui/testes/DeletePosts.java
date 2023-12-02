@@ -1,10 +1,11 @@
 package br.ufc.quixada.blog.ui.testes;
 
-import br.ufc.quixada.blog.dao.PostDAO;
 // import br.ufc.quixada.blog.dao.UserDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.ComponentScan;
+
+import br.ufc.quixada.blog.dao.relational.PostDaoRelacional;
 
 /**
  * InsereUsers
@@ -13,7 +14,7 @@ import org.springframework.context.annotation.ComponentScan;
 public class DeletePosts implements CommandLineRunner {
 
     @Autowired
-    private PostDAO postDAO;
+    private PostDaoRelacional postDAO;
 
     @Override
     public void run(String... args) {

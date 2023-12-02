@@ -1,7 +1,6 @@
 package br.ufc.quixada.blog.ui.testes;
 
-// import br.ufc.quixada.blog.dao.PostDAO;
-import br.ufc.quixada.blog.dao.UserDAO;
+import br.ufc.quixada.blog.dao.relational.UserDaoRelacional;
 // import br.ufc.quixada.blog.models.Post;
 import br.ufc.quixada.blog.models.Usuario;
 
@@ -19,7 +18,7 @@ public class InserePosts implements CommandLineRunner {
     // private PostDAO postDAO;
 
     @Autowired
-    private UserDAO userDAO;
+    private UserDaoRelacional userDAO;
 
     @Override
     public void run(String... args) {

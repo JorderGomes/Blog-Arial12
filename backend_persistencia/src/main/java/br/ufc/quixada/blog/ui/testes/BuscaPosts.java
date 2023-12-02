@@ -1,6 +1,6 @@
 package br.ufc.quixada.blog.ui.testes;
 
-import br.ufc.quixada.blog.dao.PostDAO;
+import br.ufc.quixada.blog.dao.relational.PostDaoRelacional;
 // import br.ufc.quixada.blog.dao.UserDAO;
 import br.ufc.quixada.blog.models.Post;
 // import br.ufc.quixada.blog.models.Usuario;
@@ -22,7 +22,7 @@ import org.springframework.context.annotation.ComponentScan;
 public class BuscaPosts implements CommandLineRunner {
 
     @Autowired
-    private PostDAO postDAO;
+    private PostDaoRelacional postDAO;
 
     private List<Post> posts = new ArrayList<>();
 

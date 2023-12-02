@@ -7,6 +7,8 @@ import lombok.*;
 import java.sql.Timestamp;
 import java.util.List;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 @NamedQueries({
         @NamedQuery(name = "buscarAutorPorIdDePost", query = "select p.usuario from Post p where p.id = :id")
         ,@NamedQuery(name = "buscarComentariosPorIdDoPost", query = "select p.comentarios from Post p where p.id = :id")
@@ -20,11 +22,12 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@Document
 public class Post{
 
     @Id
-    @GeneratedValue (strategy = GenerationType.SEQUENCE)
-    private Integer id;
+	@GeneratedValue(strategy = GenerationType.UUID)
+	private String id;
 
     private String titulo;
 

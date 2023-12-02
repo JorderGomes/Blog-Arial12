@@ -1,9 +1,10 @@
 package br.ufc.quixada.blog.ui.testes;
 
-import br.ufc.quixada.blog.dao.UserDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.ComponentScan;
+
+import br.ufc.quixada.blog.dao.relational.UserDaoRelacional;
 
 /**
  * InsereUsers
@@ -12,7 +13,7 @@ import org.springframework.context.annotation.ComponentScan;
 public class DeleteUsers implements CommandLineRunner {
 
     @Autowired
-    private UserDAO userDAO;
+    private UserDaoRelacional userDAO;
 
     @Override
     public void run(String... args) {

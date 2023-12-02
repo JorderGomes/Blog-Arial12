@@ -1,6 +1,6 @@
 package br.ufc.quixada.blog.ui.testes;
 
-import br.ufc.quixada.blog.dao.UserDAO;
+import br.ufc.quixada.blog.dao.relational.UserDaoRelacional;
 import br.ufc.quixada.blog.models.Usuario;
 
 import java.util.List;
@@ -16,7 +16,7 @@ import org.springframework.context.annotation.ComponentScan;
 public class BuscaUsers implements CommandLineRunner {
 
     @Autowired
-    private UserDAO userDAO;
+    private UserDaoRelacional userDAO;
 
     @Override
     public void run(String... args) {

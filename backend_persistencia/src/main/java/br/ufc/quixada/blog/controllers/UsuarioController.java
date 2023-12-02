@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.ufc.quixada.blog.dao.UserDAO;
+import br.ufc.quixada.blog.dao.relational.UserDaoRelacional;
 import br.ufc.quixada.blog.models.Post;
 import br.ufc.quixada.blog.models.Usuario;
 
@@ -24,7 +24,7 @@ import br.ufc.quixada.blog.models.Usuario;
 @RequestMapping("/usuarios")
 public class UsuarioController {
     @Autowired
-    UserDAO userDAO;
+    UserDaoRelacional userDAO;
 
     @Value("${spring.profiles.active}")
     private String databaseProfile;
