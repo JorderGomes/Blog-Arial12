@@ -1,9 +1,8 @@
 package br.ufc.quixada.blog.models;
 
 import java.io.Serializable;
-import java.sql.Timestamp;
+import java.util.Date;
 import java.util.Collection;
-// import java.sql.Date;
 
 import com.fasterxml.jackson.annotation.*;
 
@@ -45,8 +44,8 @@ public class Usuario implements Serializable {
     @Column(columnDefinition = "numeric default 0.0")
     private Double rate = 0.0;
 
-    @Temporal(TemporalType.TIMESTAMP)
-    private Timestamp dataDeNascimento;
+    @Temporal(TemporalType.DATE)
+    private Date dataDeNascimento;
 
 
     @OneToMany(mappedBy = "usuario")

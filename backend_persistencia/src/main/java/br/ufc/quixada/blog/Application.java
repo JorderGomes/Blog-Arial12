@@ -1,4 +1,4 @@
-package br.ufc.quixada.blog.ui;
+package br.ufc.quixada.blog;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
@@ -10,7 +10,6 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 
 
 @SpringBootApplication
-@ComponentScan(basePackages = "br.ufc.quixada.blog")
 @EntityScan("br.ufc.quixada.blog.models")
 @EnableJpaRepositories("br.ufc.quixada.blog.dao.relational")
 @EnableMongoRepositories("br.ufc.quixada.blog.dao.mongo")
