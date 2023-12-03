@@ -6,7 +6,10 @@ import org.springframework.stereotype.Repository;
 import br.ufc.quixada.blog.dao.CommentDAO;
 import br.ufc.quixada.blog.models.Comentario;
 
+import org.springframework.context.annotation.Primary;
+
+@Primary
 @Repository
-public interface CommentDaoMongo extends CommentDAO, MongoRepository<Comentario, String> {
+public interface CommentDaoMongo extends MongoRepository<Comentario, String> {
     
 }

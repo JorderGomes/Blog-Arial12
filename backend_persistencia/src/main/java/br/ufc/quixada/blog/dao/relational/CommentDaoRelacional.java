@@ -11,7 +11,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 @Primary
-@Repository
+// @Repository
 public interface CommentDaoRelacional extends CommentDAO, JpaRepository<Comentario, String> {
 
     // @Query("")

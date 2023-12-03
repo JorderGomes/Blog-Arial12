@@ -14,7 +14,7 @@ import br.ufc.quixada.blog.models.Post;
 import br.ufc.quixada.blog.models.Usuario;
 
 @Repository
-@Primary
+// @Primary
 public interface PostDaoRelacional extends PostDAO, JpaRepository<Post, String> {
     
     @Query("select p from Post p  where p.titulo ilike %:word%")

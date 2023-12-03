@@ -1,4 +1,4 @@
-package br.ufc.quixada.blog.ui.testes;
+package br.ufc.quixada.blog.testes;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
