@@ -1,6 +1,6 @@
 package br.ufc.quixada.blog.controllers.mongo;
 
-import br.ufc.quixada.blog.dao.UserDAO;
+// import br.ufc.quixada.blog.dao.UserDAO;
 import br.ufc.quixada.blog.dao.mongo.UserDaoMongo;
 import br.ufc.quixada.blog.models.Usuario;
 import org.springframework.beans.factory.annotation.Autowired;

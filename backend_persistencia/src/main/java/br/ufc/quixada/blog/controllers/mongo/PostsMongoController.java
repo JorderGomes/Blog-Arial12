@@ -1,7 +1,7 @@
 package br.ufc.quixada.blog.controllers.mongo;
 
-import br.ufc.quixada.blog.dao.PostDAO;
-import br.ufc.quixada.blog.dao.UserDAO;
+// import br.ufc.quixada.blog.dao.PostDAO;
+// import br.ufc.quixada.blog.dao.UserDAO;
 import br.ufc.quixada.blog.dao.mongo.PostDaoMongo;
 import br.ufc.quixada.blog.dao.mongo.UserDaoMongo;
 import br.ufc.quixada.blog.models.Post;
@@ -13,7 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Map;
+// import java.util.Map;
 import java.util.Optional;
 
 // import br.ufc.quixada.blog.dao.relational.UserDaoRelacional;

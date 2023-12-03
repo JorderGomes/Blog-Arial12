@@ -1,8 +1,8 @@
 package br.ufc.quixada.blog.controllers.mongo;
 
-import br.ufc.quixada.blog.dao.CommentDAO;
-import br.ufc.quixada.blog.dao.PostDAO;
-import br.ufc.quixada.blog.dao.UserDAO;
+// import br.ufc.quixada.blog.dao.CommentDAO;
+// import br.ufc.quixada.blog.dao.PostDAO;
+// import br.ufc.quixada.blog.dao.UserDAO;
 import br.ufc.quixada.blog.dao.mongo.CommentDaoMongo;
 import br.ufc.quixada.blog.dao.mongo.PostDaoMongo;
 import br.ufc.quixada.blog.dao.mongo.UserDaoMongo;
