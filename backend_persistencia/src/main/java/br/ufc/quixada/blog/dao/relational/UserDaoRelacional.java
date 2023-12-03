@@ -1,5 +1,6 @@
 package br.ufc.quixada.blog.dao.relational;
 
+import br.ufc.quixada.blog.dao.UserDAO;
 import br.ufc.quixada.blog.models.Post;
 import br.ufc.quixada.blog.models.Usuario;
 
@@ -12,7 +13,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 @Primary
-public interface UserDaoRelacional extends JpaRepository<Usuario, String> {
+public interface UserDaoRelacional extends UserDAO, JpaRepository<Usuario, String> {
 
     public Usuario findFirstByEmail(String email);
 
@@ -24,7 +25,7 @@ public interface UserDaoRelacional extends JpaRepository<Usuario, String> {
     public Usuario buscarUsuarioPorEmail(String email);
 
     @Query(name = "buscarPostsPorIdDeUsuario")
-    public List<Post> buscarPostsPorIdDeUsuario(int id);
+    public List<Post> buscarPostsPorIdDeUsuario(String id);
 
     @Query("select u from Usuario u where Cast(strftime('%Y', u.dataDeNascimento / 1000, 'unixepoch') as integer) = :ano")
     public List<Usuario> buscarUsuariosPorAnoDeNascimentoSQLITE(int ano);

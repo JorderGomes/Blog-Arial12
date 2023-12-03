@@ -7,7 +7,9 @@ import java.util.Optional;
 import br.ufc.quixada.blog.models.Post;
 // import br.ufc.quixada.blog.models.Post;
 
+import org.springframework.stereotype.Component;
 
+@Component
 public interface PostDAO{
 
     // Crud

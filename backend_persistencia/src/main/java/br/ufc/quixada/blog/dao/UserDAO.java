@@ -3,9 +3,12 @@ package br.ufc.quixada.blog.dao;
 import java.util.List;
 import java.util.Optional;
 
+
 import br.ufc.quixada.blog.models.Post;
 import br.ufc.quixada.blog.models.Usuario;
+import org.springframework.stereotype.Component;
 
+@Component
 public interface UserDAO {
 
     // Crud

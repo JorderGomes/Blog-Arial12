@@ -4,7 +4,9 @@ import java.util.List;
 import java.util.Optional;
 
 import br.ufc.quixada.blog.models.Comentario;
+import org.springframework.stereotype.Component;
 
+@Component
 public interface CommentDAO {
 
     // Crud
@@ -21,6 +23,6 @@ public interface CommentDAO {
 
     // Operações específicas
 
-    public List<Comentario> findByComentarioId(String post_id);
+    public List<Comentario> findByPostId(String post_id);
 
 }
