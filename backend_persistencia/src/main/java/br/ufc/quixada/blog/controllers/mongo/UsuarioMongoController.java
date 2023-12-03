@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 // import br.ufc.quixada.blog.dao.relational.UserDaoRelacional;
 
@@ -18,7 +19,7 @@ import java.util.List;
 public class UsuarioMongoController {
 
     @Autowired
-    UserDAO userDAO;
+    UserDaoMongo userDAO;
 
     @Value("${spring.profiles.active}")
     private String databaseProfile;
@@ -59,6 +60,17 @@ public class UsuarioMongoController {
         usuario.setId(id);
         usuario = userDAO.save(usuario);
         return  ResponseEntity.ok(usuario);
+    }
+
+    @GetMapping(value = "/email")
+    public ResponseEntity<Usuario> buscarPorEmail(@RequestParam String email){
+        System.out.println(email);
+        Optional<Usuario> optUsuario = userDAO.findByEmail(email);
+        if (optUsuario.isPresent()){
+            return ResponseEntity.ok(optUsuario.get());
+        }
+        System.out.println();
+        return ResponseEntity.notFound().build();
     }
 
 }

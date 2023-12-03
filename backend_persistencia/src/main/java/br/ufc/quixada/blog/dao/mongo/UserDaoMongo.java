@@ -19,7 +19,7 @@ public interface UserDaoMongo extends MongoRepository<Usuario, String> {
 
     public Usuario save(Usuario usuario);
     
-    public Usuario findFirstByEmail(String email);
+    Optional<Usuario> findByEmail(String email);
 
     public Optional<Usuario> findById(String id);
 
@@ -27,6 +27,10 @@ public interface UserDaoMongo extends MongoRepository<Usuario, String> {
 
     public void deleteById(String id);
 
-    @Query(value = "{ 'email' : ?0 }")
-    public Usuario buscaUsuarioPorEmail(String email);
+    @Query(value = "{ 'email' : :#{#email}} }")
+    public Optional<Usuario> buscaUsuarioPorEmail(String email);
+
+    @Query(value = "{ '_id' : ?0 }", fields = "{ 'posts' : 1 }")
+    List<Post> buscarPostsPorIdDeUsuario(String id);
+
 }
