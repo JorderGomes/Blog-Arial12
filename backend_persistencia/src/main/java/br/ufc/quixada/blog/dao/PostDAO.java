@@ -14,7 +14,7 @@ public interface PostDAO{
 
     // Crud
 
-    public void save(Post post);
+    public Post save(Post post);
 
     public List<Post> findAll();
 

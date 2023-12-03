@@ -12,3 +12,14 @@ services:
       - '5432:5432'
     volumes:
       - ./init:/docker-entrypoint-initdb.d/
+  mongodb:
+    container_name: mongodb
+    image: mongo:latest
+    volumes:
+      - ~/mongo:/data/db
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: 'persist'
+      MONGO_INITDB_ROOT_PASSWORD: 'persist'
+      MONGO_INITDB_DATABASE: 'dbpersist2023'
