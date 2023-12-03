@@ -77,5 +77,15 @@ public class PostsMongoController {
             return ResponseEntity.notFound().build();
         }
     }
+
+    @GetMapping(value = "/")
+    public ResponseEntity<List<Post>> buscarPostsPorIdUsuario(@RequestParam String userId){
+        Optional<Usuario> usuario = userDAO.findById(userId);
+        if(usuario.isEmpty()){
+            return ResponseEntity.notFound().build();
+        }
+        List<Post> posts = postDAO.findPostsByUserId(userId);
+        return ResponseEntity.ok(posts);
+    }
     
 }

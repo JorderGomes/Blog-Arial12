@@ -1,7 +1,9 @@
 package br.ufc.quixada.blog.controllers.mongo;
 
+import br.ufc.quixada.blog.dao.PostDAO;
 import br.ufc.quixada.blog.dao.UserDAO;
 import br.ufc.quixada.blog.dao.mongo.UserDaoMongo;
+import br.ufc.quixada.blog.models.Post;
 import br.ufc.quixada.blog.models.Usuario;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -31,6 +33,7 @@ public class UsuarioMongoController {
 
     @GetMapping(value = "/{id}")
     public ResponseEntity<Usuario> getUsuario(@PathVariable String id){
+        Optional<Usuario> usuario = userDAO.findById(id);
         return userDAO.findById(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
