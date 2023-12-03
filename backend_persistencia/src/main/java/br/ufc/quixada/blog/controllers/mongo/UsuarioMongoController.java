@@ -18,7 +18,7 @@ import java.util.List;
 public class UsuarioMongoController {
 
     @Autowired
-    UserDAO userDAO;
+    UserDaoMongo userDAO;
 
     @Value("${spring.profiles.active}")
     private String databaseProfile;
