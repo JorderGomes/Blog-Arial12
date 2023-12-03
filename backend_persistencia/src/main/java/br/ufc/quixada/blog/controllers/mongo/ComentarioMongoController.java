@@ -1,8 +1,5 @@
 package br.ufc.quixada.blog.controllers.mongo;
 
-// import br.ufc.quixada.blog.dao.CommentDAO;
-// import br.ufc.quixada.blog.dao.PostDAO;
-// import br.ufc.quixada.blog.dao.UserDAO;
 import br.ufc.quixada.blog.dao.mongo.CommentDaoMongo;
 import br.ufc.quixada.blog.dao.mongo.PostDaoMongo;
 import br.ufc.quixada.blog.dao.mongo.UserDaoMongo;
@@ -35,7 +32,7 @@ public class ComentarioMongoController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Comentario> getComentarioById(@PathVariable String id) {
-        Optional<Comentario> comentarioOpt = commentDAO.getComentarioById(id);
+        Optional<Comentario> comentarioOpt = commentDAO.findComentarioById(id);
         if (comentarioOpt.isPresent()) {
             return ResponseEntity.ok(comentarioOpt.get());
         } else {
@@ -43,17 +40,30 @@ public class ComentarioMongoController {
         }
     }
 
-    @GetMapping("/post/{postId}")
-    public ResponseEntity<List<Comentario>> getComentariosByPostId(@PathVariable String postId) {
+    @GetMapping("/post/")
+    public ResponseEntity<List<Comentario>> getComentariosByPostId(@RequestParam String postId) {
         Optional<Post> postOpt = postDAO.findById(postId);
         if (postOpt.isPresent()) {
-            Post post = postOpt.get();
-            return ResponseEntity.ok(post.getComentarios());
+            System.err.println("Uhul, Funcionando ainda post "+postId);
+            List<Comentario> comentarios = commentDAO.findByPostId(postId);
+            return ResponseEntity.ok(comentarios);
         } else {
+            System.err.println("erro ;-;");
             return ResponseEntity.notFound().build();
         }
-        // List<Comentario> comentarios = commentDAO.findByPostId(postId);
-        // return;
+    }
+
+    @GetMapping("/user/")
+    public ResponseEntity<List<Comentario>> getComentariosByUsuarioId(@RequestParam String userId) {
+        Optional<Usuario> usuarioOpt = userDAO.findById(userId);
+        if (usuarioOpt.isPresent()) {
+            System.err.println("Uhul, Funcionando ainda user "+userId);
+            List<Comentario> comentarios = commentDAO.findByUserId(userId);
+            return ResponseEntity.ok(comentarios);
+        } else {
+            System.err.println("erro ;-;");
+            return ResponseEntity.notFound().build();
+        }
     }
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
