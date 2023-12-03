@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.sql.Timestamp;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -39,8 +40,8 @@ public class Post{
 
     private String categoria;
 
-    @Temporal(TemporalType.TIMESTAMP)
-    private Timestamp dataDeCriacao;
+    @Temporal(TemporalType.DATE)
+    private Date dataDeCriacao;
 
     @ManyToOne
     private Usuario usuario;

@@ -19,7 +19,7 @@ public interface UserDaoMongo extends MongoRepository<Usuario, String> {
 
     public Usuario save(Usuario usuario);
     
-    Optional<Usuario> findByEmail(String email);
+    public Optional<Usuario> findByEmail(String email);
 
     public Optional<Usuario> findById(String id);
 
