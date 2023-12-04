@@ -51,7 +51,7 @@ const PostsDeUsuarioPage = ({ params }) => {
     }
 
     const postResponse = await axios
-      .get(`http://localhost:8080/usuarios/${idUsuario}/posts`)
+      .get(`http://localhost:8080/posts/user/${idUsuario}`)
       .then((response) => response.data)
       .catch((error) => {
         console.log(error);

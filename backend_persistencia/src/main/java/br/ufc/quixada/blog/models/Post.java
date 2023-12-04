@@ -37,6 +37,7 @@ public class Post{
     @Temporal(TemporalType.DATE)
     private Date dataDeCriacao;
 
+
     @ManyToOne
     private Usuario usuario;
 

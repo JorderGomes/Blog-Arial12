@@ -100,7 +100,7 @@ const CriarUsuarioPage = () => {
         </label>
         <input
           className="form-control"
-          type="number"
+          type="text"
           id="idUsuario"
           name="idUsuario"
           onChange={handleChange}

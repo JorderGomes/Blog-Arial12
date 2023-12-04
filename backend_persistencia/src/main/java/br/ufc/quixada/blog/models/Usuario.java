@@ -43,12 +43,12 @@ public class Usuario implements Serializable {
     private Date dataDeNascimento;
 
 
-    @OneToMany(mappedBy = "usuario")
+    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
     @JsonIgnore
     private Collection<Post> posts;
 
 
-    @OneToMany(mappedBy = "usuario")
+    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
     @JsonIgnore
     private Collection<Comentario> comentarios;
 
