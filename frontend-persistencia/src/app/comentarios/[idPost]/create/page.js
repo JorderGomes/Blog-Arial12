@@ -78,7 +78,7 @@ const CriarComentarioPage = ({params}) => {
         </label>
         <input
           className="form-control"
-          type="number"
+          type="text"
           id="idUsuario"
           name="idUsuario"
           min={1}

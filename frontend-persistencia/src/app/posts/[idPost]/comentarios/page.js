@@ -27,11 +27,11 @@ const PostDeUsuarioPage = ({ params }) => {
         return;
       }
       if (comentarios === null) {
-        setTitulo("Não foi achado nenhum comentário nesse comentario");
+        setTitulo("Não foi achado nenhum comentário nesse post");
         return;
       }
       if (comentarios.length === 0) {
-        setTitulo("Não foi achado nenhum comentário nesse comentario");
+        setTitulo("Não foi achado nenhum comentário nesse post");
         return;
       }
       setTitulo(`Esses são os comentarios do post ${idPost}`);
@@ -104,12 +104,15 @@ const PostDeUsuarioPage = ({ params }) => {
   }
 
   function definePagina() {
-    if (post === null) return <>
-      <SubPageContainer
-        menuTitle={titulo}
-        returnCallback={() => router.push(`/posts/${idPost}`)}
-      ></SubPageContainer>
-    </>;
+    if (post === null)
+      return (
+        <>
+          <SubPageContainer
+            menuTitle={titulo}
+            returnCallback={() => router.push(`/posts/${idPost}`)}
+          ></SubPageContainer>
+        </>
+      );
     return (
       <SubPageContainer
         menuTitle={titulo}
