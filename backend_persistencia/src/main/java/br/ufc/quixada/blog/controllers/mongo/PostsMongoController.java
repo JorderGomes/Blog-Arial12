@@ -87,5 +87,27 @@ public class PostsMongoController {
         List<Post> posts = postDAO.findPostsByUserId(userId);
         return ResponseEntity.ok(posts);
     }
+
+    @GetMapping("/search/title")
+    public List<Post> searchByTitle(@RequestParam String term) {
+        List<Post> posts = postDAO.findByTituloRegexIgnoreCase(term);
+        return posts;
+    }
+
+    @GetMapping("/search/body")
+    public List<Post> searchByBody(@RequestParam String term) {
+        List<Post> posts = postDAO.findByCorpoRegexIgnoreCase(term);
+        return posts;
+    }
     
+    @GetMapping("/search/rate")
+    public List<Post> searchByRate(@RequestParam Double minRate) {
+        return postDAO.findPostsByMinRate(minRate);
+    }
+
+    @GetMapping("/count")
+    public ResponseEntity<Long> countPosts() {
+        return ResponseEntity.ok(postDAO.countAllPosts());
+    }
+
 }

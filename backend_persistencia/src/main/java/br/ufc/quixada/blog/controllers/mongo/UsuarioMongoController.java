@@ -30,7 +30,6 @@ public class UsuarioMongoController {
 
     @GetMapping(value = "/{id}")
     public ResponseEntity<Usuario> getUsuario(@PathVariable String id){
-        Optional<Usuario> usuario = userDAO.findById(id);
         return userDAO.findById(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
