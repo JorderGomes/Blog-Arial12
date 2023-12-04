@@ -92,13 +92,13 @@ public class PostsMongoController {
 
     @GetMapping("/search/title")
     public List<Post> searchByTitle(@RequestParam String term) {
-        List<Post> posts = postDAO.findByTituloRegexIgnoreCase(term);
+        List<Post> posts = postDAO.findByWordInTitle(term);
         return posts;
     }
 
     @GetMapping("/search/body")
     public List<Post> searchByBody(@RequestParam String term) {
-        List<Post> posts = postDAO.findByCorpoRegexIgnoreCase(term);
+        List<Post> posts = postDAO.findByWordInBody(term);
         return posts;
     }
     
@@ -109,7 +109,7 @@ public class PostsMongoController {
 
     @GetMapping("/count")
     public ResponseEntity<Long> countPosts() {
-        return ResponseEntity.ok(postDAO.countAllPosts());
+        return ResponseEntity.ok(postDAO.count());
     }
 
 }
