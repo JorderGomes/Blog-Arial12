@@ -12,7 +12,6 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-@Primary
 public interface PostDaoMongo extends PostDAO, MongoRepository<Post, String> {
     @Query(value = "{ 'usuario._id' : ?0 }")
     public List<Post> findPostsByUsuarioId(String id);

@@ -29,9 +29,9 @@ public class Comentario {
     private Date dataDeCriacao;
 
 
-    @ManyToOne(cascade = CascadeType.REMOVE)
+    @ManyToOne
     private Post post;
 
-    @ManyToOne(cascade = CascadeType.REMOVE)
+    @ManyToOne
     private Usuario usuario;
 }

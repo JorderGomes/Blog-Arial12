@@ -70,10 +70,10 @@ const UsuarioPage = ({ params }) => {
     const { name, value } = event.target;
     switch (name) {
       case "titulo":
-        setNome(value);
+        setTitulo(value);
         break;
       case "corpo":
-        setEmail(value);
+        setCorpo(value);
         break;
       case "categoria":
         setCategoria(value);
