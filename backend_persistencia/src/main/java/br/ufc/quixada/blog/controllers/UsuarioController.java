@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import br.ufc.quixada.blog.dao.UserDAO;
 import br.ufc.quixada.blog.models.Post;
 import br.ufc.quixada.blog.models.Usuario;
+import br.ufc.quixada.blog.service.UserService;
 
 // import br.ufc.quixada.blog.dao.relational.UserDaoRelacional;
 
@@ -19,6 +20,9 @@ import br.ufc.quixada.blog.models.Usuario;
 public class UsuarioController {
     @Autowired
     UserDAO userDAO;
+
+    @Autowired
+    UserService userService;
 
     @Value("${spring.profiles.active}")
     private String databaseProfile;
@@ -55,6 +59,7 @@ public class UsuarioController {
             return ResponseEntity.notFound().build();
         }
         userDAO.deleteById(id);
+        //        userService.deleteWithDependences(id);
         return ResponseEntity.noContent().build();
     }
 

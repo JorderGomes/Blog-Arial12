@@ -26,7 +26,6 @@ public class Post{
 	private String id;
 
     private String titulo;
-
     
     private String corpo;
 

@@ -47,6 +47,7 @@ public class PostsController {
         Optional<Post> postOpt = postDAO.findById(id);
         return postOpt.map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
     }
+    
     @GetMapping(value = "/user/{id}")
     public ResponseEntity<List<Post>> getPostsByUserId(@PathVariable String id){
         return ResponseEntity.ok(postDAO.findPostsByUsuarioId(id));

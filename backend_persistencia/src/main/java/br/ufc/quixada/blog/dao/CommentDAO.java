@@ -21,6 +21,8 @@ public interface CommentDAO {
 
     public boolean existsById(String id);
 
+    public void deleteByUserId(String id);
+
     // Operações específicas
 
     public List<Comentario> findByPostId(String post_id);

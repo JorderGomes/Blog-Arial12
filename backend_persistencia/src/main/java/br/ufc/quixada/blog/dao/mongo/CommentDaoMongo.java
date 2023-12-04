@@ -25,6 +25,9 @@ public interface CommentDaoMongo extends CommentDAO, MongoRepository<Comentario,
     @Query(value = "{'usuario._id': ?0}")
     public List<Comentario> findByUsuarioId(String userId);
 
+    @Query("{'user.id': ?0}")
+    void deleteByUserId(String userId);
+
 
 
 }

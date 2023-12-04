@@ -11,7 +11,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 @Primary
-// @Repository
+@Repository
 public interface CommentDaoRelacional extends CommentDAO, JpaRepository<Comentario, String> {
 
     // @Query("")
@@ -20,5 +20,8 @@ public interface CommentDaoRelacional extends CommentDAO, JpaRepository<Comentar
     public List<Comentario> findByPostId(String postId);
 
     public List<Comentario> findByUsuarioId(String userId);
+
+    @Query(value = "delete from comentarios where usuario_id = :userId", nativeQuery = true)
+    void deleteByUserId(String userId);
 
 }

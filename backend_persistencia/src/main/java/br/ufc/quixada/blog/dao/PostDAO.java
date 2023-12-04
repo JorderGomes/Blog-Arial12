@@ -24,6 +24,9 @@ public interface PostDAO{
     
     public boolean existsById(String id);
 
+    public void deleteByUserId(String id);
+
+
     // Operações específicas
 
     public long count();

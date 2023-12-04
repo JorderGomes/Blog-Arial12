@@ -3,6 +3,7 @@ package br.ufc.quixada.blog.dao.relational;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -10,8 +11,8 @@ import org.springframework.stereotype.Repository;
 import br.ufc.quixada.blog.dao.PostDAO;
 import br.ufc.quixada.blog.models.Post;
 
+@Primary
 @Repository
-// @Primary
 public interface PostDaoRelacional extends PostDAO, JpaRepository<Post, String> {
 
     public Post save(Post post);
@@ -19,6 +20,9 @@ public interface PostDaoRelacional extends PostDAO, JpaRepository<Post, String> 
     public boolean existsById(String id);
 
     public void deleteById(String id);
+
+    @Query(value = "delete from posts where usuario_id = :userId", nativeQuery = true)
+    void deleteByUserId(String userId);
 
     @Query("select p from Post p  where p.titulo ilike %:word%")
     public List<Post> findByWordInTitle(String word);

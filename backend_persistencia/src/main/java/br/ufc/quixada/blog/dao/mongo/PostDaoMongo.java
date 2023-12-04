@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-@Primary
+// @Primary
 public interface PostDaoMongo extends PostDAO, MongoRepository<Post, String> {
     @Query(value = "{ 'usuario._id' : ?0 }")
     public List<Post> findPostsByUsuarioId(String id);
@@ -22,6 +22,9 @@ public interface PostDaoMongo extends PostDAO, MongoRepository<Post, String> {
     public Post save(Post post);
 
     public void deleteById(String id);
+
+    @Query("{'user.id': ?0}")
+    void deleteByUserId(String userId);
 
     public Optional<Post> findById(String id);
 
