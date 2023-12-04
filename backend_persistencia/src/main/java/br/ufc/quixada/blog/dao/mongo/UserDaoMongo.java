@@ -13,6 +13,7 @@ import java.util.Optional;
 // import org.springframework.context.annotation.Primary;
 
 @Repository
+@Primary
 public interface UserDaoMongo extends UserDAO, MongoRepository<Usuario, String> {
 
     public Usuario save(Usuario usuario);

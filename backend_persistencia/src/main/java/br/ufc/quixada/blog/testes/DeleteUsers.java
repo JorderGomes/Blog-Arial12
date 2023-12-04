@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.ComponentScan;
 
-import br.ufc.quixada.blog.dao.relational.UserDaoRelacional;
+// import br.ufc.quixada.blog.dao.relational.UserDaoRelacional;
 
 /**
  * InsereUsers

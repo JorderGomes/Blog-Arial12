@@ -12,14 +12,15 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-// @Primary
+@Primary
 public interface PostDaoMongo extends PostDAO, MongoRepository<Post, String> {
+    public Post save(Post post);
+    
     @Query(value = "{ 'usuario._id' : ?0 }")
     public List<Post> findPostsByUsuarioId(String id);
 
     public boolean existsById(String id);
 
-    public Post save(Post post);
 
     public void deleteById(String id);
 

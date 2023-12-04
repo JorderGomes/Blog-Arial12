@@ -11,6 +11,7 @@ import br.ufc.quixada.blog.models.Comentario;
 import java.util.List;
 import java.util.Optional;
 
+@Primary
 @Repository
 public interface CommentDaoMongo extends CommentDAO, MongoRepository<Comentario, String> {
 

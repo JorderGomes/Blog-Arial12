@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 import br.ufc.quixada.blog.dao.PostDAO;
 import br.ufc.quixada.blog.models.Post;
 
-@Primary
+// @Primary
 @Repository
 public interface PostDaoRelacional extends PostDAO, JpaRepository<Post, String> {
 
