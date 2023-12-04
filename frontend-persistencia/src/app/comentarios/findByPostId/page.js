@@ -50,7 +50,7 @@ const FindComentarioByIdPage = () => {
         </label>
         <input
           className="form-control"
-          type="number"
+          type="text"
           id="id"
           name="id"
           onChange={handleChange}

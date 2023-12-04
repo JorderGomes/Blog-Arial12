@@ -55,8 +55,8 @@ public class ComentarioController {
     public ResponseEntity<List<Comentario>> getComentariosByPostId(@PathVariable String postId) {
         Optional<Post> postOpt = postDAO.findById(postId);
         if (postOpt.isPresent()) {
-            Post post = postOpt.get();
-            return ResponseEntity.ok(post.getComentarios());
+            List<Comentario> comentarios = commentDAO.findByPostId(postId);
+            return ResponseEntity.ok(comentarios);
         } else {
             return ResponseEntity.notFound().build();
         }
