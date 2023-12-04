@@ -47,6 +47,10 @@ public class PostsController {
         Optional<Post> postOpt = postDAO.findById(id);
         return postOpt.map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
     }
+    @GetMapping(value = "/user/{id}")
+    public ResponseEntity<List<Post>> getPostsByUserId(@PathVariable String id){
+        return ResponseEntity.ok(postDAO.findPostsByUsuarioId(id));
+    }
 
     @GetMapping("/search/title")
     public List<Post> searchByTitle(@RequestParam String term) {
@@ -64,13 +68,13 @@ public class PostsController {
     }
 
     @GetMapping("/count")
-    public ResponseEntity<Integer> countPosts() {
-        return ResponseEntity.ok(postDAO.countPosts());
+    public ResponseEntity<Long> countPosts() {
+        return ResponseEntity.ok(postDAO.count());
     }
 
-    @GetMapping("/countByCategory")
-    public ResponseEntity<List<Map<String, Integer>>> countPostsByCategory() {
-        return ResponseEntity.ok(postDAO.countPostsByCategoria());
+    @GetMapping("/countByCategory/{categoria}")
+    public ResponseEntity<Integer> countPostsByCategory(@PathVariable String categoria) {
+        return ResponseEntity.ok(postDAO.countPostsByCategoria(categoria));
     }
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)

@@ -16,7 +16,9 @@ public interface CommentDaoRelacional extends CommentDAO, JpaRepository<Comentar
 
     // @Query("")
     // @Query(value = "select count(id) from posts p", nativeQuery = true)
-    @Query(value = "select * from comentarios where post_id = :post_id", nativeQuery = true)
-    public List<Comentario> findByPostId(String post_id);
+    @Query(value = "select * from comentarios where post_id = :postId", nativeQuery = true)
+    public List<Comentario> findByPostId(String postId);
+
+    public List<Comentario> findByUsuarioId(String userId);
 
 }

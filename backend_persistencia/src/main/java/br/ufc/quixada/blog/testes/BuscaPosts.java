@@ -51,13 +51,11 @@ public class BuscaPosts implements CommandLineRunner {
             System.out.println(post.getTitulo() + " " +post.getRate());
         }
 
-        int qtdPosts = postDAO.countPosts();
+        long qtdPosts = postDAO.count();
         System.out.println("Qtd posts cadastrados: " + qtdPosts);
 
-        List<Map<String, Integer>> qtdByCategoria = postDAO.countPostsByCategoria();
-        for(Map<String, Integer> currentCount : qtdByCategoria){
-            System.out.println(currentCount.get("categoria") +": "+ currentCount.get("count"));
-        }
+        Integer qtdByCategoria = postDAO.countPostsByCategoria("Gerencia de Configuracao");
+        System.out.println(("categoria") +"Gerencia de Configuracao" + ": "+ "count: "+ qtdByCategoria);
 
     }
     

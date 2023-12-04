@@ -26,9 +26,7 @@ public interface PostDAO{
 
     // Operações específicas
 
-    public int countPosts();
-
-    public Post findFirstByTitulo(String title);
+    public long count();
 
     public List<Post> findByWordInTitle(String word);
 
@@ -36,7 +34,9 @@ public interface PostDAO{
 
     public List<Post> findPostsByMinRate(Double min_rate);
 
-    public List<Map<String, Integer>> countPostsByCategoria();
+    public Integer countPostsByCategoria(String categoria);
+
+    public List<Post> findPostsByUsuarioId(String id);
 
 
 }

@@ -2,6 +2,8 @@ package br.ufc.quixada.blog.controllers.mongo;
 
 // import br.ufc.quixada.blog.dao.PostDAO;
 // import br.ufc.quixada.blog.dao.UserDAO;
+import br.ufc.quixada.blog.dao.PostDAO;
+import br.ufc.quixada.blog.dao.UserDAO;
 import br.ufc.quixada.blog.dao.mongo.PostDaoMongo;
 import br.ufc.quixada.blog.dao.mongo.UserDaoMongo;
 import br.ufc.quixada.blog.models.Post;
@@ -23,10 +25,10 @@ import java.util.Optional;
 @RequestMapping("/posts/mongo")
 public class PostsMongoController {
     @Autowired
-    UserDaoMongo userDAO;
+    UserDAO userDAO;
 
     @Autowired
-    PostDaoMongo postDAO;
+    PostDAO postDAO;
 
     @GetMapping
     public ResponseEntity<List<Post>> getPosts() {
@@ -84,7 +86,7 @@ public class PostsMongoController {
         if(usuario.isEmpty()){
             return ResponseEntity.notFound().build();
         }
-        List<Post> posts = postDAO.findPostsByUserId(userId);
+        List<Post> posts = postDAO.findPostsByUsuarioId(userId);
         return ResponseEntity.ok(posts);
     }
 

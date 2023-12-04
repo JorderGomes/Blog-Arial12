@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 
+import br.ufc.quixada.blog.models.Comentario;
 import br.ufc.quixada.blog.models.Post;
 import br.ufc.quixada.blog.models.Usuario;
 import org.springframework.stereotype.Component;
@@ -23,18 +24,10 @@ public interface UserDAO {
 
     public boolean existsById(String id);
 
+    public void delete(Usuario usuario);
+
     // Operações específicas
 
-    public Usuario findFirstByEmail(String email);
-
-    public Usuario buscaUsuarioPorEmail(String email);
-
-    public Usuario buscarUsuarioPorEmail(String email);
-
-    public List<Post> buscarPostsPorIdDeUsuario(String id);
-
-    public List<Usuario> buscarUsuariosPorAnoDeNascimentoSQLITE(int ano);
-
-    public List<Usuario> buscarUsuariosPorAnoDeNascimentoPGSQL(int ano);
+    public Optional<Usuario> findFirstByEmail(String email);
 
 }

@@ -1,5 +1,6 @@
 package br.ufc.quixada.blog.controllers.mongo;
 
+import br.ufc.quixada.blog.dao.UserDAO;
 import br.ufc.quixada.blog.dao.mongo.UserDaoMongo;
 import br.ufc.quixada.blog.models.Usuario;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +19,7 @@ import java.util.Optional;
 public class UsuarioMongoController {
 
     @Autowired
-    UserDaoMongo userDAO;
+    UserDAO userDAO;
 
     @Value("${spring.profiles.active}")
     private String databaseProfile;
@@ -64,7 +65,7 @@ public class UsuarioMongoController {
     @GetMapping(value = "/email")
     public ResponseEntity<Usuario> buscarPorEmail(@RequestParam String email){
         System.out.println(email);
-        Optional<Usuario> optUsuario = userDAO.findByEmail(email);
+        Optional<Usuario> optUsuario = userDAO.findFirstByEmail(email);
         if (optUsuario.isPresent()){
             return ResponseEntity.ok(optUsuario.get());
         }

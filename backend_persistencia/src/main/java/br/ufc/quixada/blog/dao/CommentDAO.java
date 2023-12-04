@@ -25,4 +25,6 @@ public interface CommentDAO {
 
     public List<Comentario> findByPostId(String post_id);
 
+    public List<Comentario> findByUsuarioId(String userId);
+
 }

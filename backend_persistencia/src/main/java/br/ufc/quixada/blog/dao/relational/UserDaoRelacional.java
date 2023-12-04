@@ -13,29 +13,13 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 @Repository
-// @Primary
+@Primary
 public interface UserDaoRelacional extends UserDAO, JpaRepository<Usuario, String> {
 
     public void deleteById(String id);
 
-    public Usuario findFirstByEmail(String email);
+    public void delete(Usuario usuario);
 
-    @Query("select u from Usuario u where u.email = :email")
-    public Usuario buscaUsuarioPorEmail(String email);
-
-    // a busca "usuarioPorEmail está definida na Classe User"
-    @Query(name = "buscarUsuarioPorEmail")
-    public Usuario buscarUsuarioPorEmail(String email);
-
-    @Query(name = "buscarPostsPorIdDeUsuario")
-    public List<Post> buscarPostsPorIdDeUsuario(String id);
-
-    @Query("select u from Usuario u where Cast(strftime('%Y', u.dataDeNascimento / 1000, 'unixepoch') as integer) = :ano")
-    public List<Usuario> buscarUsuariosPorAnoDeNascimentoSQLITE(int ano);
-
-    // @Query("select u from Usuario u where Extract(year from to_timestamp(to_char(
-    // (u.dataDeNascimento),'YYYY-MM-DD'),'YYYY-MM-DD')) = :ano")
-    @Query("select u from Usuario u where Extract(year from u.dataDeNascimento) = :ano")
-    public List<Usuario> buscarUsuariosPorAnoDeNascimentoPGSQL(int ano);
+    public Optional<Usuario> findFirstByEmail(String email);
 
 }

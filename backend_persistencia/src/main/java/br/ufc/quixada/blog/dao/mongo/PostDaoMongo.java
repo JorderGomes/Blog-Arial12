@@ -1,31 +1,41 @@
 package br.ufc.quixada.blog.dao.mongo;
 
+import br.ufc.quixada.blog.dao.PostDAO;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 import org.springframework.stereotype.Repository;
 
-// import br.ufc.quixada.blog.dao.PostDAO;
 import br.ufc.quixada.blog.models.Post;
 import org.springframework.context.annotation.Primary;
-// import org.springframework.context.annotation.Primary;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 @Primary
-public interface PostDaoMongo extends MongoRepository<Post, String> {
+public interface PostDaoMongo extends PostDAO, MongoRepository<Post, String> {
     @Query(value = "{ 'usuario._id' : ?0 }")
-    public List<Post> findPostsByUserId(String id);
+    public List<Post> findPostsByUsuarioId(String id);
 
-    @Query("{'titulo' : { $regex: ?0, $options: 'i' } }")
-    public List<Post> findByTituloRegexIgnoreCase(String substring);
+    public boolean existsById(String id);
 
-    @Query("{'corpo' : { $regex: ?0, $options: 'i' } }")
-    public List<Post> findByCorpoRegexIgnoreCase(String substring);
+    public Post save(Post post);
+
+    public void deleteById(String id);
+
+    public Optional<Post> findById(String id);
 
     @Query(value = "{}", count = true)
-    public Long countAllPosts();
+    public long count();
 
-    @Query("{ 'rate' : { $gte: ?0 } }")
-    List<Post> findPostsByMinRate(double minRate);
+    @Query(value = "{titulo : {$regex: ?0, $options: 'i'} }")
+    public List<Post> findByWordInTitle(String word);
+
+    @Query(value = "{corpo : {$regex: ?0, $options: 'i'} }")
+    public List<Post> findByWordInBody(String word);
+
+    @Query(value = "{rate: {$gte: ?0} }")
+    public List<Post> findPostsByMinRate(Double min_rate);
+
+    public Integer countPostsByCategoria();
 }

@@ -1,5 +1,8 @@
 package br.ufc.quixada.blog.controllers.mongo;
 
+import br.ufc.quixada.blog.dao.CommentDAO;
+import br.ufc.quixada.blog.dao.PostDAO;
+import br.ufc.quixada.blog.dao.UserDAO;
 import br.ufc.quixada.blog.dao.mongo.CommentDaoMongo;
 import br.ufc.quixada.blog.dao.mongo.PostDaoMongo;
 import br.ufc.quixada.blog.dao.mongo.UserDaoMongo;
@@ -22,17 +25,17 @@ import java.util.Optional;
 @RequestMapping("/comentarios/mongo")
 public class ComentarioMongoController {
     @Autowired
-    UserDaoMongo userDAO;
+    UserDAO userDAO;
 
     @Autowired
-    PostDaoMongo postDAO;
+    PostDAO postDAO;
 
     @Autowired
-    CommentDaoMongo commentDAO;
+    CommentDAO commentDAO;
 
     @GetMapping("/{id}")
     public ResponseEntity<Comentario> getComentarioById(@PathVariable String id) {
-        Optional<Comentario> comentarioOpt = commentDAO.findComentarioById(id);
+        Optional<Comentario> comentarioOpt = commentDAO.findById(id);
         if (comentarioOpt.isPresent()) {
             return ResponseEntity.ok(comentarioOpt.get());
         } else {
@@ -58,7 +61,7 @@ public class ComentarioMongoController {
         Optional<Usuario> usuarioOpt = userDAO.findById(userId);
         if (usuarioOpt.isPresent()) {
             System.err.println("Uhul, Funcionando ainda user "+userId);
-            List<Comentario> comentarios = commentDAO.findByUserId(userId);
+            List<Comentario> comentarios = commentDAO.findByUsuarioId(userId);
             return ResponseEntity.ok(comentarios);
         } else {
             System.err.println("erro ;-;");

@@ -10,11 +10,6 @@ import java.util.List;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@NamedQueries({
-        @NamedQuery(name = "buscarAutorPorIdDePost", query = "select p.usuario from Post p where p.id = :id")
-        ,@NamedQuery(name = "buscarComentariosPorIdDoPost", query = "select p.comentarios from Post p where p.id = :id")
-})
-
 @Document
 @Entity
 @Table(name = "posts", schema = "public")
